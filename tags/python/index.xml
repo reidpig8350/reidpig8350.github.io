@@ -6,17 +6,16 @@
     <description>Recent content in Python on Liva | Personal blog template</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 29 Oct 2019 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jan 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>以Python自動抓取Google Sheets資料</title>
-      <link>https://reidpig8350.github.io/blog/post-3/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      <title>軟體工程師扶持計畫訓練營</title>
+      <link>https://reidpig8350.github.io/blog/bootcamp/</link>
+      <pubDate>Wed, 20 Jan 2021 10:07:47 +0600</pubDate>
       
-      <guid>https://reidpig8350.github.io/blog/post-3/</guid>
-      <description>前言 多人專案管理 進行大型專案時，通常都需要多人參與，當你是團隊中的 Leader，你的決策可以讓這個專案有完全不同的風貌。
-你希望能夠有個好的開始，但是時間的壓力也相當緊迫。根據過往的經驗，在多人進行專案時，也許你第一時間會想到的就是 Google 提供的雲端功能。
-Google 雲端功能的強大之處，第一當然是可以多人同時編輯的好處，再來更重要的一點是，當出包的時候，也可以把責任歸屬得一清二楚！（要是背了這鍋，年終就&amp;hellip;&amp;hellip;？）
-Google Sheets Google Sheets做為資料運算及處裡都是首要的工具，可以多人協作方式管理、內建函數運算或者自己編寫程式（使用JavaScript或者Google Apps Script），讓他成為了足以取代 Excel 的強大工具。</description>
+      <guid>https://reidpig8350.github.io/blog/bootcamp/</guid>
+      <description>個人簡介 在求學時對於自然科學比較有興趣的原因，是因為我喜歡在知道答案之後，梳理每一個步驟的感覺。除此之外，我也喜歡團隊合作的討論與交流，除了可以從旁人的經驗獲取知識，也能夠透過講解的過程更加深自己的能力，屢試不爽。因此在職涯的抉擇中，就在學術研究以及工程師這兩個領域之中作出抉擇，但苦於對機械的興趣無法再更深，覺得機械領域並不是適合我的選擇，也在寫程式的過程中獲得成就感，才會有想要成為工程師的念頭。
+我畢業於中山大學機械系，在畢業之際也汲汲營營和系上同學一起報考研究所，幸運錄取了台大應力所。碩班一年的修課期間，在「計算材料力學」的課程中，教授以 Python 為計算工具，讓我們得已將過去人腦運算的公式，轉譯成電腦的語言（例如人腦可以運算無限，電腦則否），除了學期末的作業讓我獲得滿滿的成就感，在每個星期與隊友的討論也讓我學習到不少，是我第一次接觸程式。
+然而後來論文難有進展，而對學術研究這條路懷疑，因此給自己轉彎的機會，申請休學後就開始尋找工作。目前在網頁數據分析的公司擔任PM，雖然應徵條件上並沒有程式語言的要求，但是卻提供了我一些作為程式語言練習的素材。例如客戶週報與月報會需要 Google Analytics(GA) 所搜集的資料，以及後續的資料整理使用的 Excel，我分別利用 Python 定時抓取 Google Analytics api 資料，再使用 VBA 整理 Excel 中存取的數據，除了能夠大幅的減少我工作的時間，也降低我粗心的機會。</description>
     </item>
     
   </channel>
