@@ -5,7 +5,9 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python, Google Sheets, python 爬蟲">
+  <meta name="description"
+    content="Python, Google Sheets, python 爬蟲">
+  
   <meta name="author" content="Reid Chu">
   <meta name="generator" content="Hugo 0.80.0" />
 
@@ -43,6 +45,15 @@
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', '', 'auto');
     ga('send', 'pageview');
+
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KW43NP9');
   </script>
 
 </head><body>
@@ -67,23 +78,11 @@
           <ul class="navbar-nav mr-auto">
             
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-facebook"></i></a>
+              <a class="nav-link" href="https://www.facebook.com/profile.php?id=100000406569793"><i class="ti-facebook"></i></a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-twitter-alt"></i></a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-instagram"></i></a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-github"></i></a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-linkedin"></i></a>
+              <a class="nav-link" href="https://github.com/reidpig8350"><i class="ti-github"></i></a>
             </li>
             
           </ul>
@@ -103,12 +102,6 @@
           
           <li class="nav-item">
             <a class="nav-link" href="https://reidpig8350.github.io/blog">Post</a>
-          </li>
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="https://reidpig8350.github.io/contact">Contact</a>
           </li>
           
           
@@ -154,21 +147,22 @@
         <img src="https://reidpig8350.github.io/images/featured-post/post-3.jpg" class="img-fluid w-100 mb-4" alt="以Python自動抓取Google Sheets資料">
         
         <div class="content mb-5">
-          <h2 id="前言">前言</h2>
-<p><!-- raw HTML omitted --></p>
+          <p><!-- raw HTML omitted --></p>
 <h3 id="多人專案管理">多人專案管理</h3>
 <p>進行大型專案時，通常都需要多人參與，當你是團隊中的 Leader，你的決策可以讓這個專案有完全不同的風貌。</p>
+<p>若你是工程師，使用 git 與其他同事合作是首要之選，但若團隊之中還有對於程式碼陌生的同事&hellip;&hellip;</p>
 <p>你希望能夠有個好的開始，但是時間的壓力也相當緊迫。根據過往的經驗，在多人進行專案時，也許你第一時間會想到的就是 Google 提供的雲端功能。</p>
-<p>Google 雲端功能的強大之處，第一當然是可以多人同時編輯的好處，再來更重要的一點是，當出包的時候，也可以把<strong>責任歸屬</strong>得一清二楚！（要是背了這鍋，年終就&hellip;&hellip;？）</p>
+<p>Google 雲端功能的強大之處，第一當然是可以多人同時編輯的好處，再來更重要的一點是，當出包的時候，也可以把<strong>責任歸屬得一清二楚！</strong>（要是背了這鍋，年終就&hellip;&hellip;？）</p>
 <h3 id="google-sheets">Google Sheets</h3>
-<p>Google Sheets做為資料運算及處裡都是首要的工具，可以多人協作方式管理、內建函數運算或者自己編寫程式（使用JavaScript或者<a href="https://support.google.com/docs/answer/9331168?hl=zh-Hant" title="使用巨集和外掛程式">Google Apps Script</a>），讓他成為了足以取代 Excel 的強大工具。</p>
+<p>Google Sheets 做為資料運算、儲存及處裡都是重要的工具，可以多人協作方式管理、內建函數運算或者自己編寫程式（使用JavaScript或者<a href="https://support.google.com/docs/answer/9331168?hl=zh-Hant" title="使用巨集和外掛程式">Google Apps Script</a>），讓他成為了足以取代 Excel 的強大工具。</p>
 <h4 id="本文摘要">本文摘要</h4>
+<p><!-- raw HTML omitted --></p>
 <ol>
 <li><strong>在 Google apis 建立專案</strong></li>
 <li><strong>在專案中取得檔案金鑰</strong></li>
 <li><strong>調整 Google Sheets 權限</strong></li>
 <li><strong>Python 的 <a href="https://oauth2client.readthedocs.io/en/latest/" title="oauth2client">oauth2client</a> 套件</strong></li>
-<li><strong>Pyton 指令碼</strong></li>
+<li><strong>Python 指令碼</strong></li>
 </ol>
 <!-- raw HTML omitted -->
 <h5 id="emphasis">Emphasis</h5>
@@ -313,15 +307,15 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
         <h6 class="mb-4">Contact Me</h6>
         <ul class="list-unstyled">
           
-          <li class="mb-3"><a class="text-dark" href="tel:0124857985320"><i
-                class="ti-mobile mr-3 text-primary"></i>0124857985320</a></li>
+          <li class="mb-3"><a class="text-dark" href="tel:0932463348"><i
+                class="ti-mobile mr-3 text-primary"></i>0932463348</a></li>
           
                      
-          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Dhaka, Bangladedsh</li>
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>台灣</li>
           
                      
-          <li class="mb-3"><a class="text-dark" href="mailto:demo@email.com"><i
-                class="ti-email mr-3 text-primary"></i>demo@email.com</a>
+          <li class="mb-3"><a class="text-dark" href="mailto:e079004@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>e079004@gmail.com</a>
           
           </li>
         </ul>
@@ -331,15 +325,9 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
         <h6 class="mb-4">Social Contacts</h6>
         <ul class="list-unstyled">
           
-          <li class="mb-3"><a class="text-dark" href="#">facebook</a></li>
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/profile.php?id=100000406569793">facebook</a></li>
           
-          <li class="mb-3"><a class="text-dark" href="#">twitter</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="#">instagram</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="#">github</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="#">linkedin</a></li>
+          <li class="mb-3"><a class="text-dark" href="https://github.com/reidpig8350">github</a></li>
           
         </ul>
       </div>
@@ -354,12 +342,6 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
       <div class="col-lg-3 col-sm-6 mb-5">
         <h6 class="mb-4">Quick Links</h6>
         <ul class="list-unstyled">
-          
-          <li class="mb-3"><a class="text-dark" href="https://reidpig8350.github.io/about">About</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://reidpig8350.github.io/blog">Post</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://reidpig8350.github.io/contact">Contact</a></li>
           
         </ul>
       </div>
