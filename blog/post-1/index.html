@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-tw"><head>
   <meta charset="utf-8">
-  <title>Liva | Personal blog template</title>
+
+  
+  <title>在 Windows 使用 Git 指令</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="自我介紹, introducing myself, Reid Chu">
+  <meta name="description"
+    content="Windows環境, 環境變數, PowerShell, git in windows">
+  
   <meta name="author" content="Reid Chu">
   <meta name="generator" content="Hugo 0.80.0" />
 
@@ -43,6 +47,15 @@
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', '', 'auto');
     ga('send', 'pageview');
+
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KW43NP9');
   </script>
 
 </head><body>
@@ -67,23 +80,11 @@
           <ul class="navbar-nav mr-auto">
             
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-facebook"></i></a>
+              <a class="nav-link" href="https://www.facebook.com/profile.php?id=100000406569793"><i class="ti-facebook"></i></a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-twitter-alt"></i></a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-instagram"></i></a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-github"></i></a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-linkedin"></i></a>
+              <a class="nav-link" href="https://github.com/reidpig8350"><i class="ti-github"></i></a>
             </li>
             
           </ul>
@@ -103,12 +104,6 @@
           
           <li class="nav-item">
             <a class="nav-link" href="https://reidpig8350.github.io/blog">Post</a>
-          </li>
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="https://reidpig8350.github.io/contact">Contact</a>
           </li>
           
           
@@ -142,7 +137,7 @@
         <a href="/categories/blog"
           class="text-primary">Blog</a>
         
-        <h2>How To Use Checklists To Improve Your UX</h2>
+        <h2>在 Windows 使用 Git 指令</h2>
         <div class="mb-3 post-meta">
           <span>By Reid Chu</span>
           
@@ -152,7 +147,9 @@
         </div>
         
         <div class="content mb-5">
-          <h1 id="heading-1">Heading 1</h1>
+          <p>如果你是 macOS 系統，原生的 bash 跟 git 就有很好的相容性，甚至不必另行安裝就可以使用。但是如果是 Windows 的使用者，並且 Powershell 版本不足的話，就必須要自行安裝 git 在電腦當中。</p>
+<p>對於 git 需求較少的使用者而言，也許 Github Desktop (Github發行的 git 圖形化應用程式) 就已經足以應付你的使用，但對於有心經營程式語言的同學，請<strong>不要浪費時間在 Github Desktop 上</strong>，否則光是處理 Bug 就足以浪費你一整個週末了&hellip;，這絕對不是我經歷過的血淚史&hellip;。</p>
+<h1 id="heading-1">Heading 1</h1>
 <h2 id="heading-2">Heading 2</h2>
 <h3 id="heading-3">Heading 3</h3>
 <h4 id="heading-4">Heading 4</h4>
@@ -301,15 +298,15 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
         <h6 class="mb-4">Contact Me</h6>
         <ul class="list-unstyled">
           
-          <li class="mb-3"><a class="text-dark" href="tel:0124857985320"><i
-                class="ti-mobile mr-3 text-primary"></i>0124857985320</a></li>
+          <li class="mb-3"><a class="text-dark" href="tel:0932463348"><i
+                class="ti-mobile mr-3 text-primary"></i>0932463348</a></li>
           
                      
-          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Dhaka, Bangladedsh</li>
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>台灣</li>
           
                      
-          <li class="mb-3"><a class="text-dark" href="mailto:demo@email.com"><i
-                class="ti-email mr-3 text-primary"></i>demo@email.com</a>
+          <li class="mb-3"><a class="text-dark" href="mailto:e079004@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>e079004@gmail.com</a>
           
           </li>
         </ul>
@@ -319,15 +316,9 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
         <h6 class="mb-4">Social Contacts</h6>
         <ul class="list-unstyled">
           
-          <li class="mb-3"><a class="text-dark" href="#">facebook</a></li>
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/profile.php?id=100000406569793">facebook</a></li>
           
-          <li class="mb-3"><a class="text-dark" href="#">twitter</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="#">instagram</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="#">github</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="#">linkedin</a></li>
+          <li class="mb-3"><a class="text-dark" href="https://github.com/reidpig8350">github</a></li>
           
         </ul>
       </div>
@@ -337,17 +328,14 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
           <li class="mb-3"><a class="text-dark"
               href="/categories/blog">Blog</a>
           </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/web-design">Web design</a>
+          </li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6 mb-5">
         <h6 class="mb-4">Quick Links</h6>
         <ul class="list-unstyled">
-          
-          <li class="mb-3"><a class="text-dark" href="https://reidpig8350.github.io/about">About</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://reidpig8350.github.io/blog">Post</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://reidpig8350.github.io/contact">Contact</a></li>
           
         </ul>
       </div>
@@ -363,8 +351,6 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
 </script>
 
 <!-- JS Plugins -->
-
-<script src="https://reidpig8350.github.io/plugins/Google/GTM-head.js"></script>
 
 <script src="https://reidpig8350.github.io/plugins/jQuery/jquery.min.js"></script>
 
