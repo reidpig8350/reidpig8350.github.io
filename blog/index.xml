@@ -19,5 +19,14 @@
 Google 雲端功能的強大之處，第一當然是可以多人同時編輯的好處，再來更重要的一點是，當出包的時候，也可以把責任歸屬得一清二楚！（要是背了這鍋，年終就&amp;hellip;&amp;hellip;？）</description>
     </item>
     
+    <item>
+      <title>在 Windows 使用 Git 指令</title>
+      <link>https://reidpig8350.github.io/blog/git_windows/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://reidpig8350.github.io/blog/git_windows/</guid>
+      <description>如果你是 macOS 系統，原生的 bash 跟 git 就有很好的相容性，甚至不必另行安裝就可以使用。但是如果是 Windows 的使用者，並且 PowerShell 版本不足的話，就必須要自行安裝 git 並設定，未來才可以在殼層中以指令執行。</description>
+    </item>
+    
   </channel>
 </rss>

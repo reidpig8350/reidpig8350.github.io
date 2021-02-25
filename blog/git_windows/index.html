@@ -3,12 +3,12 @@
   <meta charset="utf-8">
 
   
-  <title>Python</title>
+  <title>在 Windows 使用 Git 指令</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
-    content="This is meta description">
+    content="Windows環境, 環境變數, PowerShell, git in windows">
   
   <meta name="author" content="Reid Chu">
   <meta name="generator" content="Hugo 0.80.0" />
@@ -129,99 +129,97 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
+      <div class="col-lg-8 mx-auto">
         
-        <div class="card-body px-0">
-            
-            <a href="/categories/web-design"
-                class="text-primary">Web design</a>
-            
-            <a href="https://reidpig8350.github.io/blog/post-3/" class="h5 d-block my-3">以Python定期抓取Google Sheets資料</a>
-            <div class="mb-3 post-meta">
-                <span>By Reid Chu</span>
-                
-                <span class="border-bottom border-primary px-2 mx-1"></span>
-                <span>29 October 2019</span>
-                
-            </div>
-            <p class="card-text">Python, Google Sheets, python 爬蟲</p>
-            <a href="https://reidpig8350.github.io/blog/post-3/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+        <a href="/categories/blog"
+          class="text-primary">Blog</a>
+        
+        <h2>在 Windows 使用 Git 指令</h2>
+        <div class="mb-3 post-meta">
+          <span>By Reid Chu</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>29 October 2019</span>
           
         </div>
-      </div>
-      
-      <div class="col-lg-4">
-  
-  <div class="widget">
-    
-    <h4 class="widget-title">About Me</h4>
-    
-    <p>Hi 我是Reid</p>
-    <a href="https://reidpig8350.github.io/about/" class="btn btn-outline-primary">Know More</a>
-    
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Category</h4>
-    <ul class="list-unstyled">
-      <li><a href="/categories/blog">Blog</a>
-      </li>
-      <li><a href="/categories/web-design">Web design</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Tag</h4>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/git">Git</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/google-sheets">Google sheets</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/programming">Programming</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/python">Python</a></li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Social</h4>
-    <ul class="list-inline social-links">
-      
-      <li class="list-inline-item"><a href="/"><i class="ti-facebook"></i></a></li>
-      
-      <li class="list-inline-item"><a href="https://github.com/reidpig8350"><i class="ti-github"></i></a></li>
-      
-    </ul>
-  </div>
-  
-  
-</div>
-      
-
-      
-      <div class="col-12 mt-5">
         
+        <div class="content mb-5">
+          <p><!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<p>如果你是 macOS 系統，原生的 bash 跟 git 就有很好的相容性，甚至不必另行安裝就可以使用。但是如果是 Windows 的使用者，並且 PowerShell 版本不足的話，就必須要自行安裝 git 並設定，未來<strong>才可以在殼層中以指令執行</strong>。</p>
+<p>對於 git 需求較少的使用者而言，也許 <a href="https://desktop.github.com/" title="Github Desktop">Github Desktop</a> (Github發行的 git 圖形化應用程式) 就已經足以應付你的使用習慣，但對於有心經營程式語言的同學，請<strong>不要浪費時間在 <a href="https://desktop.github.com/" title="Github Desktop">Github Desktop</a> 上</strong>，否則光是處理 Bug 就足以浪費你一整個週末了&hellip;，這絕對不是我經歷過的血淚史&hellip;。</p>
+<p><!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<ul>
+<li>
+<h5 id="前言">前言</h5>
+</li>
+<li>
+<h5 id="甚麼是環境變數">甚麼是環境變數</h5>
+</li>
+<li>
+<h5 id="下載-git-for-windowshttpsgit-scmcomdownloadwin-download-git-for-windows">下載 <a href="https://git-scm.com/download/win" title="Download git for Windows">git for Windows</a></h5>
+</li>
+<li>
+<h5 id="新增環境變數">新增環境變數</h5>
+</li>
+</ul>
+<p><!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<h3 id="前言-1">前言</h3>
+<p>在 Windows 系統中，最常使用的殼層 (Shell)，除了過去熟悉的 cmd 命令提示字元，從 2016 年開源的 <a href="https://zh.wikipedia.org/wiki/Windows_PowerShell" title="Windows PowerShell">Windows PowerShell</a> 成了近期的熱門工具。本篇文章就以 PowerShell 進行設定，讓你快速上手 git 在 Windows 系統下的應用環境。</p>
+<p><!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<h3 id="甚麼是環境變數-1">甚麼是環境變數</h3>
+<p>在撰寫任何專案時後，總是需要使用多項工具，若正在建立系統的資料庫，那也許你會使用 SQL、MongoDB 等工具；若正在撰寫部落格，那你也許會用到 Hugo。因此本篇文章以 git 為例子，未來如果需要設定任何工具，也可以舉一反三，將<strong>工具加入環境變數後，就可以在 Windows 系統下的殼層中使用。</strong></p>
+<p><!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<h3 id="下載-git-for-windowshttpsgit-scmcomdownloadwin-download-git-for-windows-1">下載 <a href="https://git-scm.com/download/win" title="Download git for Windows">git for Windows</a></h3>
+<p><!-- raw HTML omitted --></p>
+<ol>
+<li>下載相應版本<a href="https://git-scm.com/download/win" title="Download git for Windows">git for Windows</a></li>
+<li>安裝在適當路徑</li>
+<li>複製 bin 資料夾路徑</li>
+</ol>
+<p><!-- raw HTML omitted --></p>
+<h3 id="詳細說明">詳細說明</h3>
+<p>下載 <a href="https://git-scm.com/download/win" title="Download git for Windows">git for Windows</a> 後，依據電腦系統選擇相應的版本，如果不知道電腦的系統類型，可以回到桌面對「本機」(我的電腦) 選擇右鍵中內容，查看「系統類型」。</p>
+<p>下載並且執行安裝檔，安裝在預設路徑或者自訂義路徑都無妨，但是建議存放在系統硬碟，以大部分 PC 的安裝習慣而言，系統硬碟應該會對應到 <strong>C:</strong>，例如我安裝的路徑就是在 <strong>C:\git</strong>。</p>
+<p>安裝完成後點開 git，再進入 bin 資料夾 <strong>(C:\git\bin)</strong>，並且複製路徑。</p>
+<p><!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<h3 id="新增環境變數-1">新增環境變數</h3>
+<p><!-- raw HTML omitted --></p>
+<ol>
+<li>在桌面點選「本機」右鍵選擇「內容」</li>
+<li>系統進階設定</li>
+<li>點選「環境變數(N)&hellip;」</li>
+<li>在使用者變數單擊 Path → 編輯(E)&hellip;</li>
+<li>將 bin 資料夾的路徑貼上去</li>
+</ol>
+<p>先在桌面找到「本機」右鍵選擇「內容」、點擊「系統進階設定」進入系統內容，再來要注意上方有五個分頁，在第三個分頁中，可以在右下角的位置找到「環境變數(N)&hellip;」按鈕並點擊。</p>
+<p><img src="https://reidpig8350.github.io/images/post/git_windows/1st.JPG" alt="image">
+<img src="https://reidpig8350.github.io/images/post/git_windows/sysconten.JPG" alt="image"></p>
+<p>如上圖，環境變數分成兩種，在上的是「使用者變數」，只會在多個使用者中的其中之一作用。因此如果是公司電腦，或者研究室的資產，只要在使用者變數中新增就可以，**避免影響到同事或者學長，後果請自負！**當然如果要讓所有使用者都可以使用，除了要在下方的「系統變數」中新增之外，還要確定每個使用者都有安裝 git。</p>
+<p>在使用者變數單擊 Path → 編輯(E)&hellip;，進入「編輯環境變數」後點擊「新增」，並且把稍早複製的 bin 資料夾路徑 (我的路徑是 C:\git\bin) 貼上去並且點選確定，就大功告成了！</p>
+<p><img src="https://reidpig8350.github.io/images/post/git_windows/envariable.JPG" alt="image">
+<img src="https://reidpig8350.github.io/images/post/git_windows/gitbin.JPG" alt="image"></p>
+<p>還是不能使用嗎？請記得重新開機！接著就可以開始管理專案的版本！</p>
+<h3 id="小結">小結</h3>
+<p>設定環境變數，就相當於告訴系統你的工具放在哪裡，因此如果仔細看 bin 資料夾裡的檔案，其中 git.exe 就是這篇文章的主角，因此未來每次使用在任何 Shell 中使用 git 指令，都相當於來到 C:\git\bin 資料夾中執行 git.exe。因此當你照著文章脈絡設定好的現在，你也已經可以在 Windows 中執行 bash.exe 囉！</p>
+<p><img src="https://reidpig8350.github.io/images/post/git_windows/bash.JPG" alt="image"></p>
 
+        </div>
 
+        
+        
       </div>
     </div>
   </div>
 </section>
-
 
 
 
