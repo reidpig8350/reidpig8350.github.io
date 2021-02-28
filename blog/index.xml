@@ -8,24 +8,21 @@
     <language>zh-tw</language>
     <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>以Python定期抓取Google Sheets資料</title>
-      <link>https://reidpig8350.github.io/blog/post-3/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>https://reidpig8350.github.io/blog/post-3/</guid>
-      <description>多人專案管理 進行大型專案時，通常都需要多人參與，當你是團隊中的 Leader，你的決策可以讓這個專案有完全不同的風貌。
-若你是工程師，使用 git 與其他同事合作是首要之選，但若團隊之中還有對於程式碼陌生的同事&amp;hellip;&amp;hellip;
-你希望能夠有個好的開始，但是時間的壓力也相當緊迫。根據過往的經驗，在多人進行專案時，也許你第一時間會想到的就是 Google 提供的雲端功能。
-Google 雲端功能的強大之處，第一當然是可以多人同時編輯的好處，再來更重要的一點是，當出包的時候，也可以把責任歸屬得一清二楚！（要是背了這鍋，年終就&amp;hellip;&amp;hellip;？）</description>
-    </item>
-    
-    <item>
       <title>在 Windows 使用 Git 指令</title>
       <link>https://reidpig8350.github.io/blog/git_windows/</link>
       <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
       
       <guid>https://reidpig8350.github.io/blog/git_windows/</guid>
       <description>如果你是 macOS 系統，原生的 bash 跟 git 就有很好的相容性，甚至不必另行安裝就可以使用。但是如果是 Windows 的使用者，並且 PowerShell 版本不足的話，就必須要自行安裝 git 並設定，未來才可以在殼層中以指令執行。</description>
+    </item>
+    
+    <item>
+      <title>監聽網頁元素變化</title>
+      <link>https://reidpig8350.github.io/blog/js_mutationobserver/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://reidpig8350.github.io/blog/js_mutationobserver/</guid>
+      <description>為什麼需要 MutationObserver？ 網站可以透過 JavaScript 監聽事件，達到理想的互動或者動畫，常用的監聽事件包含點擊、鍵盤輸入或者內容變更。事件監聽除了 JavaScript 原生的 addEventListener 之外，jQuery 也是熱門的人選。但是監聽元素事件的限制是，必須在元素存在之下，才可以對它「建立事件監聽」。</description>
     </item>
     
   </channel>

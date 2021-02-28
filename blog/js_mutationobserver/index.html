@@ -3,12 +3,12 @@
   <meta charset="utf-8">
 
   
-  <title>在 Windows 使用 Git 指令</title>
+  <title>監聽網頁元素變化</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
-    content="Windows環境, 環境變數, PowerShell, git in windows">
+    content="JavaScript, MutationObserver">
   
   <meta name="author" content="Reid Chu">
   <meta name="generator" content="Hugo 0.80.0" />
@@ -137,7 +137,7 @@
         <a href="/categories/blog"
           class="text-primary">Blog</a>
         
-        <h2>在 Windows 使用 Git 指令</h2>
+        <h2>監聽網頁元素變化</h2>
         <div class="mb-3 post-meta">
           <span>By Reid Chu</span>
           
@@ -149,70 +149,153 @@
         <div class="content mb-5">
           <p><!-- raw HTML omitted --><br>
 <!-- raw HTML omitted --></p>
-<p>如果你是 macOS 系統，原生的 bash 跟 git 就有很好的相容性，甚至不必另行安裝就可以使用。但是如果是 Windows 的使用者，並且 PowerShell 版本不足的話，就必須要自行安裝 git 並設定，未來<strong>才可以在殼層中以指令執行</strong>。</p>
-<p>對於 git 需求較少的使用者而言，也許 <a href="https://desktop.github.com/" title="Github Desktop">Github Desktop</a> (Github發行的 git 圖形化應用程式) 就已經足以應付你的使用習慣，但對於有心經營程式語言的同學，請<strong>不要浪費時間在 <a href="https://desktop.github.com/" title="Github Desktop">Github Desktop</a> 上</strong>，否則光是處理 Bug 就足以浪費你一整個週末了&hellip;，這絕對不是我經歷過的血淚史&hellip;。</p>
+<h5 id="為什麼需要-mutationobserver">為什麼需要 MutationObserver？</h5>
+<p>網站可以透過 JavaScript 監聽事件，達到理想的互動或者動畫，常用的監聽事件包含點擊、鍵盤輸入或者內容變更。事件監聽除了 JavaScript 原生的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="addEventListener">addEventListener</a> 之外，<a href="https://jquery.com/" title="jQuery">jQuery</a> 也是熱門的人選。但是監聽元素事件的限制是，必須在元素存在之下，才可以對它「建立事件監聽」。</p>
+<p>常見的困擾可能是，元素並不是一開始就存在，而是<strong>經過定時倒數，或者使用這互動之後才插入</strong>。因此監聽事件不可以發生在元素產生之前，如下圖。當沒有元素時，當然也就沒有辦法對它監聽事件。</p>
+<p><img src="https://reidpig8350.github.io/images/post/js_mutationobserver/non-existed.JPG" alt="image"></p>
+<p>因此在監聽事件之前，你可以先對 document.body 監聽變化，一旦內容有所改變，再透過 query 選擇目標的元素，並且監聽事件。</p>
+<ol>
+<li>待動畫跳出</li>
+<li>MutationObserver偵測到變化</li>
+<li>對目標元素事件監聽</li>
+</ol>
 <p><!-- raw HTML omitted --><br>
 <!-- raw HTML omitted --></p>
+<h5 id="待動畫跳出">待動畫跳出</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">divisionBlock</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;div&#34;</span>); 
+<span style="color:#a6e22e">divisionBlock</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world&#34;</span>
+
+<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>(){
+  document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;body&#34;</span>).<span style="color:#a6e22e">prependChild</span>(<span style="color:#a6e22e">divisionBlock</span>)
+}, <span style="color:#ae81ff">3000</span>)
+</code></pre></div><h4 id="mutationobserverhttpsdevelopermozillaorgzh-twdocswebapimutationobserver-mutationobserver"><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/MutationObserver" title="MutationObserver">MutationObserver</a></h4>
+<p>MutationObserver 屬於物件，因此會需要</p>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<!-- raw HTML omitted -->
+<h5 id="emphasis">Emphasis</h5>
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+<!-- raw HTML omitted -->
+<h5 id="link">Link</h5>
+<p><a href="https://www.google.com">I&rsquo;m an inline-style link</a></p>
+<p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p>
+<p><a href="https://www.mozilla.org">I&rsquo;m a reference-style link</a></p>
+<p><a href="../blob/master/LICENSE">I&rsquo;m a relative reference to a repository file</a></p>
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>.</p>
+<p>URLs and URLs in angle brackets will automatically get turned into links.
+<a href="http://www.example.com">http://www.example.com</a> or <a href="http://www.example.com">http://www.example.com</a> and sometimes
+example.com (but not on Github, for example).</p>
+<p>Some text to show that the reference links can follow later.</p>
+<!-- raw HTML omitted -->
+<h5 id="paragraph">Paragraph</h5>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.</p>
+<!-- raw HTML omitted -->
+<h5 id="list">List</h5>
+<ol>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+</ol>
+<h5 id="unordered-list">Unordered List</h5>
 <ul>
-<li>
-<h5 id="前言">前言</h5>
-</li>
-<li>
-<h5 id="甚麼是環境變數">甚麼是環境變數</h5>
-</li>
-<li>
-<h5 id="下載-git-for-windowshttpsgit-scmcomdownloadwin-download-git-for-windows">下載 <a href="https://git-scm.com/download/win" title="Download git for Windows">git for Windows</a></h5>
-</li>
-<li>
-<h5 id="新增環境變數">新增環境變數</h5>
-</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
 </ul>
-<p><!-- raw HTML omitted --><br>
-<!-- raw HTML omitted --></p>
-<h3 id="前言-1">前言</h3>
-<p>在 Windows 系統中，最常使用的殼層 (Shell)，除了過去熟悉的 cmd 命令提示字元，從 2016 年開源的 <a href="https://zh.wikipedia.org/wiki/Windows_PowerShell" title="Windows PowerShell">Windows PowerShell</a> 成了近期的熱門工具。本篇文章就以 PowerShell 進行設定，讓你快速上手 git 在 Windows 系統下的應用環境。</p>
-<p><!-- raw HTML omitted --><br>
-<!-- raw HTML omitted --></p>
-<h3 id="甚麼是環境變數-1">甚麼是環境變數</h3>
-<p>在撰寫任何專案時後，總是需要使用多項工具，若正在建立系統的資料庫，那也許你會使用 SQL、MongoDB 等工具；若正在撰寫部落格，那你也許會用到 Hugo。因此本篇文章以 git 為例子，未來如果需要設定任何工具，也可以舉一反三，將<strong>工具加入環境變數後，就可以在 Windows 系統下的殼層中使用。</strong></p>
-<p><!-- raw HTML omitted --><br>
-<!-- raw HTML omitted --></p>
-<h3 id="下載-git-for-windowshttpsgit-scmcomdownloadwin-download-git-for-windows-1">下載 <a href="https://git-scm.com/download/win" title="Download git for Windows">git for Windows</a></h3>
-<p><!-- raw HTML omitted --></p>
-<ol>
-<li>下載相應版本<a href="https://git-scm.com/download/win" title="Download git for Windows">git for Windows</a></li>
-<li>安裝在適當路徑</li>
-<li>複製 bin 資料夾路徑</li>
-</ol>
-<p><!-- raw HTML omitted --></p>
-<h5 id="詳情請看">詳情請看</h5>
-<p>下載 <a href="https://git-scm.com/download/win" title="Download git for Windows">git for Windows</a> 後，依據電腦系統選擇相應的版本，如果不知道電腦的系統類型，可以回到桌面對「本機」(我的電腦) 選擇右鍵中內容，查看「系統類型」。</p>
-<p>下載並且執行安裝檔，安裝在預設路徑或者自定義路徑都無妨，但是建議存放在系統硬碟，以大部分 PC 的安裝習慣而言，系統硬碟應該會對應到 <strong>C:</strong>，例如我安裝的路徑就是在 <strong>C:\git</strong>。</p>
-<p>安裝完成後點開 git，再進入 bin 資料夾 <strong>(C:\git\bin)</strong>，並且複製路徑。</p>
-<p><!-- raw HTML omitted --><br>
-<!-- raw HTML omitted --></p>
-<h3 id="新增環境變數-1">新增環境變數</h3>
-<p><!-- raw HTML omitted --></p>
-<ol>
-<li>在桌面點選「本機」右鍵選擇「內容」</li>
-<li>系統進階設定</li>
-<li>點選「環境變數(N)&hellip;」</li>
-<li>在使用者變數單擊 Path → 編輯(E)&hellip;</li>
-<li>將 bin 資料夾的路徑貼上去</li>
-</ol>
-<h5 id="詳情請看-1">詳情請看</h5>
-<p>先在桌面找到「本機」右鍵選擇「內容」、點擊「系統進階設定」進入系統內容，再來要注意上方有五個分頁，在第三個分頁中，可以在右下角的位置找到「環境變數(N)&hellip;」按鈕並點擊。</p>
-<p><img src="https://reidpig8350.github.io/images/post/git_windows/1st.JPG" alt="image">
-<img src="https://reidpig8350.github.io/images/post/git_windows/sysconten.JPG" alt="image"></p>
-<p>如上圖，環境變數分成兩種，在上的是「使用者變數」，只會在多個使用者中的其中之一作用。因此如果是公司電腦，或者研究室的資產，只要在使用者變數中新增就可以，<strong>避免影響到同事或者學長，後果請自負</strong>！當然如果要讓所有使用者都可以使用，除了要在下方的「系統變數」中新增之外，還要確定每個使用者都有安裝 git。</p>
-<p>在使用者變數單擊 Path → 編輯(E)&hellip;，進入「編輯環境變數」後點擊「新增」，並且把稍早複製的 bin 資料夾路徑 (我的路徑是 C:\git\bin) 貼上去並且點選確定，就大功告成了！</p>
-<p><img src="https://reidpig8350.github.io/images/post/git_windows/envariable.JPG" alt="image">
-<img src="https://reidpig8350.github.io/images/post/git_windows/gitbin.JPG" alt="image"></p>
-<p>還是不能使用嗎？請記得重新開機！接著就可以開始管理專案的版本！</p>
-<h3 id="小結">小結</h3>
-<p>設定環境變數，就相當於告訴系統你的工具放在哪裡，因此如果仔細看 bin 資料夾裡的檔案，其中 git.exe 就是這篇文章的主角，因此未來在任何 Shell 中使用 git 指令，<strong>都相當於來到 C:\git\bin 資料夾中執行 git.exe</strong>。</p>
-<p>因此當你照著文章脈絡設定好的現在，也已經可以在 Windows 中執行 bash.exe 囉！未來再新增任何工具時，請記得一定要再回來複習一下，究竟該如何設定！</p>
-<p><img src="https://reidpig8350.github.io/images/post/git_windows/bash.JPG" alt="image"></p>
+<!-- raw HTML omitted -->
+<h5 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h5>
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;JavaScript syntax highlighting&#34;</span>;
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">s</span>);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Python syntax highlighting&#34;</span>
+<span style="color:#66d9ef">print</span> s
+</code></pre></div><pre><code>No language indicated, so no syntax highlighting.
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre><!-- raw HTML omitted -->
+<h5 id="blockquote">Blockquote</h5>
+<blockquote>
+<p>This is a blockquote example.</p>
+</blockquote>
+<!-- raw HTML omitted -->
+<h5 id="inline-html">Inline HTML</h5>
+<p>You can also use raw HTML in your Markdown, and it&rsquo;ll mostly work pretty well.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h5 id="tables">Tables</h5>
+<p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don&rsquo;t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<h5 id="image">Image</h5>
+<p><img src="https://reidpig8350.github.io/images/post/js_mutationobserver/non-existed.JPG" alt="image"></p>
+<!-- raw HTML omitted -->
+<h5 id="youtube-video">Youtube video</h5>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/C0DPdy98e4c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 
         </div>
 
