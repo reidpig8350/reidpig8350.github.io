@@ -82,10 +82,6 @@
           <ul class="navbar-nav mr-auto">
             
             <li class="nav-item">
-              <a class="nav-link" href="/"><i class="ti-facebook"></i></a>
-            </li>
-            
-            <li class="nav-item">
               <a class="nav-link" href="https://github.com/reidpig8350"><i class="ti-github"></i></a>
             </li>
             
@@ -153,9 +149,9 @@
 <!-- raw HTML omitted --></p>
 <h5 id="為什麼需要-mutationobserver">為什麼需要 MutationObserver？</h5>
 <p>網站可以透過 JavaScript 監聽事件，達到理想的互動或者動畫，常用的監聽事件包含點擊、鍵盤輸入或者內容變更。事件監聽除了 JavaScript 原生的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="addEventListener">addEventListener</a> 之外，<a href="https://jquery.com/" title="jQuery">jQuery</a> 也是熱門的人選。但是監聽元素事件的限制是，必須在元素存在之下，才可以對它「建立事件監聽」。</p>
-<p>常見的困擾可能是，元素並不是一開始就存在，而是<strong>經過定時倒數，或者使用這互動之後才插入的元素</strong>。因此監聽事件就不可以發生在元素產生之前，如下圖。當沒有元素時，當然也就沒有辦法對它監聽事件。</p>
+<p>常見的困擾可能是，元素並不是一開始就存有，而是<strong>經過定時倒數，或者使用者互動之後才插入的元素</strong>。因此監聽事件就不可以發生在元素存在之前，如下圖。當沒有元素時，當然也就沒有辦法對它監聽事件。</p>
 <p><img src="https://reidpig8350.github.io/images/post/js_mutationobserver/non-existed.JPG" alt="image"></p>
-<p>因此在監聽事件之前，你可以先對 <code>document.body</code> 監聽變化，一旦 attributes 或者 childList 有所改變，再透過 query 選擇目標的元素，並且監聽事件。</p>
+<p>因此在監聽事件之前，你可以先對 <code>document.body</code> 監聽變化，例如一旦 attributes 或者 childList 有所改變，再透過 query 選擇目標的元素，並且監聽事件。</p>
 <ol>
 <li>待動畫跳出</li>
 <li><code>MutationObserver</code>偵測到變化</li>
@@ -194,7 +190,7 @@
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">attrObserver</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MutationObserver</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutations</span>){
   <span style="color:#a6e22e">mutations</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutation</span>){
     <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;attributes&#34;</span>) {
-      <span style="color:#75715e">//如果 attributes 有所變化，就執行以下動畫
+      <span style="color:#75715e">// attrObserver 發現變化時，執行動畫函數
 </span><span style="color:#75715e"></span>      <span style="color:#a6e22e">animation</span>()
     }
   })
@@ -241,8 +237,6 @@
       <div class="col-lg-3 col-sm-6 mb-5">
         <h6 class="mb-4">Social Contacts</h6>
         <ul class="list-unstyled">
-          
-          <li class="mb-3"><a class="text-dark" href="/">facebook</a></li>
           
           <li class="mb-3"><a class="text-dark" href="https://github.com/reidpig8350">github</a></li>
           
