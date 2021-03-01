@@ -6,23 +6,23 @@
     <description>Recent content on Liva | Personal blog template</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>在 Windows 使用 Git 指令</title>
-      <link>https://reidpig8350.github.io/blog/git_windows/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>https://reidpig8350.github.io/blog/git_windows/</guid>
-      <description>如果你是 macOS 系統，原生的 bash 跟 git 就有很好的相容性，甚至不必另行安裝就可以使用。但是如果是 Windows 的使用者，並且 PowerShell 版本不足的話，就必須要自行安裝 git 並設定，未來才可以在殼層中以指令執行。</description>
-    </item>
-    
+    <lastBuildDate>Mon, 01 Mar 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>監聽網頁元素變化</title>
       <link>https://reidpig8350.github.io/blog/js_mutationobserver/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      <pubDate>Mon, 01 Mar 2021 10:07:47 +0600</pubDate>
       
       <guid>https://reidpig8350.github.io/blog/js_mutationobserver/</guid>
       <description>為什麼需要 MutationObserver？ 網站可以透過 JavaScript 監聽事件，達到理想的互動或者動畫，常用的監聽事件包含點擊、鍵盤輸入或者內容變更。事件監聽除了 JavaScript 原生的 addEventListener 之外，jQuery 也是熱門的人選。但是監聽元素事件的限制是，必須在元素存在之下，才可以對它「建立事件監聽」。</description>
+    </item>
+    
+    <item>
+      <title>在 Windows 使用 Git 指令</title>
+      <link>https://reidpig8350.github.io/blog/git_windows/</link>
+      <pubDate>Wed, 24 Feb 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://reidpig8350.github.io/blog/git_windows/</guid>
+      <description>如果你是 macOS 系統，原生的 bash 跟 git 就有很好的相容性，甚至不必另行安裝就可以使用。但是如果是 Windows 的使用者，並且 PowerShell 版本不足的話，就必須要自行安裝 git 並設定，未來才可以在殼層中以指令執行。</description>
     </item>
     
   </channel>

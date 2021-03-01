@@ -6,29 +6,29 @@
     <description>Recent content in Tags on Liva | Personal blog template</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 29 Oct 2019 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>git</title>
-      <link>https://reidpig8350.github.io/tags/git/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>https://reidpig8350.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Mon, 01 Mar 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript</title>
       <link>https://reidpig8350.github.io/tags/javascript/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      <pubDate>Mon, 01 Mar 2021 10:07:47 +0600</pubDate>
       
       <guid>https://reidpig8350.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>git</title>
+      <link>https://reidpig8350.github.io/tags/git/</link>
+      <pubDate>Wed, 24 Feb 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://reidpig8350.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Programming</title>
       <link>https://reidpig8350.github.io/tags/programming/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      <pubDate>Wed, 24 Feb 2021 10:07:47 +0600</pubDate>
       
       <guid>https://reidpig8350.github.io/tags/programming/</guid>
       <description></description>
