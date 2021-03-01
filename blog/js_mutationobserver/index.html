@@ -23,6 +23,8 @@
   
   <link rel="stylesheet" href="https://reidpig8350.github.io/plugins/venobox/venobox.css ">
   
+  <link rel="stylesheet" href="https://reidpig8350.github.io/plugins/CSS/custom_css.css ">
+  
 
   <!-- Main Stylesheet -->
   
@@ -151,152 +153,61 @@
 <!-- raw HTML omitted --></p>
 <h5 id="為什麼需要-mutationobserver">為什麼需要 MutationObserver？</h5>
 <p>網站可以透過 JavaScript 監聽事件，達到理想的互動或者動畫，常用的監聽事件包含點擊、鍵盤輸入或者內容變更。事件監聽除了 JavaScript 原生的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="addEventListener">addEventListener</a> 之外，<a href="https://jquery.com/" title="jQuery">jQuery</a> 也是熱門的人選。但是監聽元素事件的限制是，必須在元素存在之下，才可以對它「建立事件監聽」。</p>
-<p>常見的困擾可能是，元素並不是一開始就存在，而是<strong>經過定時倒數，或者使用這互動之後才插入</strong>。因此監聽事件不可以發生在元素產生之前，如下圖。當沒有元素時，當然也就沒有辦法對它監聽事件。</p>
+<p>常見的困擾可能是，元素並不是一開始就存在，而是<strong>經過定時倒數，或者使用這互動之後才插入的元素</strong>。因此監聽事件就不可以發生在元素產生之前，如下圖。當沒有元素時，當然也就沒有辦法對它監聽事件。</p>
 <p><img src="https://reidpig8350.github.io/images/post/js_mutationobserver/non-existed.JPG" alt="image"></p>
-<p>因此在監聽事件之前，你可以先對 document.body 監聽變化，一旦內容有所改變，再透過 query 選擇目標的元素，並且監聽事件。</p>
+<p>因此在監聽事件之前，你可以先對 <code>document.body</code> 監聽變化，一旦 attributes 或者 childList 有所改變，再透過 query 選擇目標的元素，並且監聽事件。</p>
 <ol>
 <li>待動畫跳出</li>
-<li>MutationObserver偵測到變化</li>
+<li><code>MutationObserver</code>偵測到變化</li>
 <li>對目標元素事件監聽</li>
 </ol>
 <p><!-- raw HTML omitted --><br>
 <!-- raw HTML omitted --></p>
-<h5 id="待動畫跳出">待動畫跳出</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">divisionBlock</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;div&#34;</span>); 
-<span style="color:#a6e22e">divisionBlock</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world&#34;</span>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h4 id="mutationobserverhttpsdevelopermozillaorgzh-twdocswebapimutationobserver-mutationobserver"><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/MutationObserver" title="MutationObserver">MutationObserver</a></h4>
+<p><code>MutationObserver</code> 屬於物件，因此需要在使用之前先行宣告。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">observer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MutationObserver</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutations</span>){
+  <span style="color:#a6e22e">mutations</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutation</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">type</span>)
+  })
+})
+</code></pre></div><p><code>MutationObserver</code> 的 call-back function 代表當監測到變化時，需要作出甚麼反應。例如以上 MDN 的例子，就是當元素發生變化時，就把變化的種類輸入在 <code>console.log</code> 之中。其中<code>mutation.type</code>代表元素變化的種類，常見的<strong>變化分別是 attributes、childList 以及 characterData</strong>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">animation</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){}
 
-<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>(){
-  document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;body&#34;</span>).<span style="color:#a6e22e">prependChild</span>(<span style="color:#a6e22e">divisionBlock</span>)
-}, <span style="color:#ae81ff">3000</span>)
-</code></pre></div><h4 id="mutationobserverhttpsdevelopermozillaorgzh-twdocswebapimutationobserver-mutationobserver"><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/MutationObserver" title="MutationObserver">MutationObserver</a></h4>
-<p>MutationObserver 屬於物件，因此會需要</p>
-<h1 id="heading-1">Heading 1</h1>
-<h2 id="heading-2">Heading 2</h2>
-<h3 id="heading-3">Heading 3</h3>
-<h4 id="heading-4">Heading 4</h4>
-<h5 id="heading-5">Heading 5</h5>
-<h6 id="heading-6">Heading 6</h6>
-<!-- raw HTML omitted -->
-<h5 id="emphasis">Emphasis</h5>
-<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
-<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
-<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
-<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
-<!-- raw HTML omitted -->
-<h5 id="link">Link</h5>
-<p><a href="https://www.google.com">I&rsquo;m an inline-style link</a></p>
-<p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p>
-<p><a href="https://www.mozilla.org">I&rsquo;m a reference-style link</a></p>
-<p><a href="../blob/master/LICENSE">I&rsquo;m a relative reference to a repository file</a></p>
-<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
-<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>.</p>
-<p>URLs and URLs in angle brackets will automatically get turned into links.
-<a href="http://www.example.com">http://www.example.com</a> or <a href="http://www.example.com">http://www.example.com</a> and sometimes
-example.com (but not on Github, for example).</p>
-<p>Some text to show that the reference links can follow later.</p>
-<!-- raw HTML omitted -->
-<h5 id="paragraph">Paragraph</h5>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.</p>
-<!-- raw HTML omitted -->
-<h5 id="list">List</h5>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">attrObserver</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MutationObserver</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutations</span>){
+  <span style="color:#a6e22e">mutations</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutation</span>){
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;attributes&#34;</span>){
+      <span style="color:#a6e22e">animation</span>()
+    }
+  })
+})
+</code></pre></div><p>以上的 code 可以用在偵測元素的 attribute 變化時，就執行動畫。
+了解以上內容後，就可以帶入一個實際例子：進入頁面 3 秒後，跳出「恭喜中獎」，確認後執行動畫。</p>
+<h5 id="監聽變化流程">監聽變化流程</h5>
 <ol>
-<li>List item</li>
-<li>List item</li>
-<li>List item</li>
-<li>List item</li>
-<li>List item</li>
+<li>一開始沒有「中獎」元素，觀察 body 變化</li>
+<li>當「中獎」元素 (class=&ldquo;prize&rdquo;) 出現，監聽點擊事件</li>
+<li>點擊確認後，執行動畫</li>
 </ol>
-<h5 id="unordered-list">Unordered List</h5>
-<ul>
-<li>List item</li>
-<li>List item</li>
-<li>List item</li>
-<li>List item</li>
-<li>List item</li>
-</ul>
-<!-- raw HTML omitted -->
-<h5 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h5>
-<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;JavaScript syntax highlighting&#34;</span>;
-<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">s</span>);
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Python syntax highlighting&#34;</span>
-<span style="color:#66d9ef">print</span> s
-</code></pre></div><pre><code>No language indicated, so no syntax highlighting.
-But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
-</code></pre><!-- raw HTML omitted -->
-<h5 id="blockquote">Blockquote</h5>
-<blockquote>
-<p>This is a blockquote example.</p>
-</blockquote>
-<!-- raw HTML omitted -->
-<h5 id="inline-html">Inline HTML</h5>
-<p>You can also use raw HTML in your Markdown, and it&rsquo;ll mostly work pretty well.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<h5 id="tables">Tables</h5>
-<p>Colons can be used to align columns.</p>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-<p>There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don&rsquo;t need to make the
-raw Markdown line up prettily. You can also use inline Markdown.</p>
-<table>
-<thead>
-<tr>
-<th>Markdown</th>
-<th>Less</th>
-<th>Pretty</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>Still</em></td>
-<td><code>renders</code></td>
-<td><strong>nicely</strong></td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<!-- raw HTML omitted -->
-<h5 id="image">Image</h5>
-<p><img src="https://reidpig8350.github.io/images/post/js_mutationobserver/non-existed.JPG" alt="image"></p>
-<!-- raw HTML omitted -->
-<h5 id="youtube-video">Youtube video</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">animation</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Animation&#34;</span>)}
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">attrObserver</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MutationObserver</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutations</span>){
+  <span style="color:#a6e22e">mutations</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutation</span>){
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;attributes&#34;</span>) {
+      <span style="color:#75715e">//如果 attributes 有所變化，就執行以下動畫
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">animation</span>()
+    }
+  })
+})
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/C0DPdy98e4c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-
+<span style="color:#75715e">// 建立完 MutationObserver 之後，就要找到目標
+</span><span style="color:#75715e">// config 為 true 就代表你要監聽哪些變化
+</span><span style="color:#75715e">// MutationObserver.observe(target, config)
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">observerTarget</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.prize&#34;</span>)
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">observerConfig</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">attributes</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">childList</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">characterData</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> }
+<span style="color:#a6e22e">attrObserver</span>.<span style="color:#a6e22e">observe</span>(<span style="color:#a6e22e">observerTarget</span>, <span style="color:#a6e22e">observerConfig</span>)
+</code></pre></div>
         </div>
 
         
