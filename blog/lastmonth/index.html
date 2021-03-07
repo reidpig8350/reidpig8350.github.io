@@ -3,12 +3,12 @@
   <meta charset="utf-8">
 
   
-  <title>JavaScript</title>
+  <title>自動抓取上個月的範圍</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
-    content="This is meta description">
+    content="Python, datetime, last month">
   
   <meta name="author" content="Reid Chu">
   <meta name="generator" content="Hugo 0.80.0" />
@@ -127,90 +127,44 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
+      <div class="col-lg-8 mx-auto">
         
-        <div class="card-body px-0">
-            
-            <a href="/categories/blog"
-                class="text-primary">Blog</a>
-            
-            <a href="https://reidpig8350.github.io/blog/js_mutationobserver/" class="h5 d-block my-3">監聽網頁元素變化</a>
-            <div class="mb-3 post-meta">
-                <span>By Reid Chu</span>
-                
-                <span class="border-bottom border-primary px-2 mx-1"></span>
-                <span>2021-03-01</span>
-                
-            </div>
-            <p class="card-text">JavaScript, MutationObserver</p>
-            <a href="https://reidpig8350.github.io/blog/js_mutationobserver/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+        <a href="/categories/blog"
+          class="text-primary">Blog</a>
+        
+        <h2>自動抓取上個月的範圍</h2>
+        <div class="mb-3 post-meta">
+          <span>By Reid Chu</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>07 March 2021</span>
           
         </div>
-      </div>
-      
-      <div class="col-lg-4">
-  
-  <div class="widget">
-    
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Category</h4>
-    <ul class="list-unstyled">
-      <li><a href="/categories/blog">Blog</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Tag</h4>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/git">Git</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/javascript">Javascript</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/programming">Programming</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/python">Python</a></li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Social</h4>
-    <ul class="list-inline social-links">
-      
-      <li class="list-inline-item"><a href="https://github.com/reidpig8350"><i class="ti-github"></i></a></li>
-      
-    </ul>
-  </div>
-  
-  
-</div>
-      
-
-      
-      <div class="col-12 mt-5">
         
+        <div class="content mb-5">
+          <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> datetime
 
+right_now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>today()
+this_year <span style="color:#f92672">=</span> int(right_now<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y&#34;</span>))
+this_month <span style="color:#f92672">=</span> int(right_now<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%m&#34;</span>))
 
+day_delta <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>timedelta(days<span style="color:#f92672">=</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))
+last_day <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>date(this_year, this_month, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> day_delta
+first_day <span style="color:#f92672">=</span> last_day<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y-%m-01&#34;</span>)
+
+<span style="color:#66d9ef">print</span>(first_day, last_day)
+</code></pre></div>
+        </div>
+
+        
+        
       </div>
     </div>
   </div>
 </section>
-
 
 
 

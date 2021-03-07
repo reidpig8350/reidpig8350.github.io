@@ -3,7 +3,7 @@
   <meta charset="utf-8">
 
   
-  <title>Python</title>
+  <title>python</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="https://reidpig8350.github.io/plugins/themify-icons/themify-icons.css ">
   
   <link rel="stylesheet" href="https://reidpig8350.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://reidpig8350.github.io/plugins/CSS/custom_css.css ">
   
 
   <!-- Main Stylesheet -->
@@ -78,10 +80,6 @@
       <div class="collapse navbar-collapse text-center" id="navigation">
         <div class="desktop-view">
           <ul class="navbar-nav mr-auto">
-            
-            <li class="nav-item">
-              <a class="nav-link" href="/"><i class="ti-facebook"></i></a>
-            </li>
             
             <li class="nav-item">
               <a class="nav-link" href="https://github.com/reidpig8350"><i class="ti-github"></i></a>
@@ -142,19 +140,19 @@
         
         <div class="card-body px-0">
             
-            <a href="/categories/web-design"
-                class="text-primary">Web design</a>
+            <a href="/categories/blog"
+                class="text-primary">Blog</a>
             
-            <a href="https://reidpig8350.github.io/blog/post-3/" class="h5 d-block my-3">以Python定期抓取Google Sheets資料</a>
+            <a href="https://reidpig8350.github.io/blog/lastmonth/" class="h5 d-block my-3">自動抓取上個月的範圍</a>
             <div class="mb-3 post-meta">
                 <span>By Reid Chu</span>
                 
                 <span class="border-bottom border-primary px-2 mx-1"></span>
-                <span>29 October 2019</span>
+                <span>2021-03-07</span>
                 
             </div>
-            <p class="card-text">Python, Google Sheets, python 爬蟲</p>
-            <a href="https://reidpig8350.github.io/blog/post-3/" class="btn btn-outline-primary">read more</a>
+            <p class="card-text">Python, datetime, last month</p>
+            <a href="https://reidpig8350.github.io/blog/lastmonth/" class="btn btn-outline-primary">read more</a>
         </div>
     </article>
 </div>
@@ -166,19 +164,12 @@
   
   <div class="widget">
     
-    <h4 class="widget-title">About Me</h4>
-    
-    <p>Hi 我是Reid</p>
-    <a href="https://reidpig8350.github.io/about/" class="btn btn-outline-primary">Know More</a>
-    
   </div>
   
   <div class="widget">
     <h4 class="widget-title">Category</h4>
     <ul class="list-unstyled">
       <li><a href="/categories/blog">Blog</a>
-      </li>
-      <li><a href="/categories/web-design">Web design</a>
       </li>
     </ul>
   </div>
@@ -189,7 +180,7 @@
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/git">Git</a></li>
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/google-sheets">Google sheets</a></li>
+          href="/tags/javascript">Javascript</a></li>
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
           href="/tags/programming">Programming</a></li>
       <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
@@ -200,8 +191,6 @@
   <div class="widget">
     <h4 class="widget-title">Social</h4>
     <ul class="list-inline social-links">
-      
-      <li class="list-inline-item"><a href="/"><i class="ti-facebook"></i></a></li>
       
       <li class="list-inline-item"><a href="https://github.com/reidpig8350"><i class="ti-github"></i></a></li>
       
@@ -236,15 +225,9 @@
         <h6 class="mb-4">Contact Me</h6>
         <ul class="list-unstyled">
           
-          <li class="mb-3"><a class="text-dark" href="tel:0932463348"><i
-                class="ti-mobile mr-3 text-primary"></i>0932463348</a></li>
-          
                      
           <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>台灣</li>
           
-                     
-          <li class="mb-3"><a class="text-dark" href="mailto:e079004@gmail.com"><i
-                class="ti-email mr-3 text-primary"></i>e079004@gmail.com</a>
           
           </li>
         </ul>
@@ -253,8 +236,6 @@
       <div class="col-lg-3 col-sm-6 mb-5">
         <h6 class="mb-4">Social Contacts</h6>
         <ul class="list-unstyled">
-          
-          <li class="mb-3"><a class="text-dark" href="/">facebook</a></li>
           
           <li class="mb-3"><a class="text-dark" href="https://github.com/reidpig8350">github</a></li>
           
@@ -265,9 +246,6 @@
         <ul class="list-unstyled">
           <li class="mb-3"><a class="text-dark"
               href="/categories/blog">Blog</a>
-          </li>
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/web-design">Web design</a>
           </li>
         </ul>
       </div>
@@ -323,7 +301,7 @@
 			cookieBox.classList.remove('cookie-box-hide');
 			cookieButton.onclick = function () {
 				Cookies.set('cookie-box', true, {
-					expires:  2 
+					expires:  14 
 				});
 				cookieBox.classList.add('cookie-box-hide');
 			};

@@ -6,7 +6,16 @@
     <description>Recent content on Liva | Personal blog template</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 01 Mar 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自動抓取上個月的範圍</title>
+      <link>https://reidpig8350.github.io/blog/lastmonth/</link>
+      <pubDate>Sun, 07 Mar 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://reidpig8350.github.io/blog/lastmonth/</guid>
+      <description>以 Python 為例，抓取上個月週期</description>
+    </item>
+    
     <item>
       <title>監聽網頁元素變化</title>
       <link>https://reidpig8350.github.io/blog/js_mutationobserver/</link>

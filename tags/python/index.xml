@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Liva | Personal blog template</title>
+    <title>python on Liva | Personal blog template</title>
     <link>https://reidpig8350.github.io/tags/python/</link>
-    <description>Recent content in Python on Liva | Personal blog template</description>
+    <description>Recent content in python on Liva | Personal blog template</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 29 Oct 2019 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>以Python定期抓取Google Sheets資料</title>
-      <link>https://reidpig8350.github.io/blog/post-3/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      <title>自動抓取上個月的範圍</title>
+      <link>https://reidpig8350.github.io/blog/lastmonth/</link>
+      <pubDate>Sun, 07 Mar 2021 10:07:47 +0600</pubDate>
       
-      <guid>https://reidpig8350.github.io/blog/post-3/</guid>
-      <description>多人專案管理 進行大型專案時，通常都需要多人參與，當你是團隊中的 Leader，你的決策可以讓這個專案有完全不同的風貌。
-若你是工程師，使用 git 與其他同事合作是首要之選，但若團隊之中還有對於程式碼陌生的同事&amp;hellip;&amp;hellip;
-你希望能夠有個好的開始，但是時間的壓力也相當緊迫。根據過往的經驗，在多人進行專案時，也許你第一時間會想到的就是 Google 提供的雲端功能。
-Google 雲端功能的強大之處，第一當然是可以多人同時編輯的好處，再來更重要的一點是，當出包的時候，也可以把責任歸屬得一清二楚！（要是背了這鍋，年終就&amp;hellip;&amp;hellip;？）</description>
+      <guid>https://reidpig8350.github.io/blog/lastmonth/</guid>
+      <description>以 Python 為例，抓取上個月週期</description>
     </item>
     
   </channel>
