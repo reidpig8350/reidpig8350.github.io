@@ -6,14 +6,15 @@
     <description>Recent content in Programming on Liva | Personal blog template</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 07 Mar 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Mar 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>自動抓取上個月的範圍</title>
-      <link>https://reidpig8350.github.io/blog/lastmonth/</link>
-      <pubDate>Sun, 07 Mar 2021 10:07:47 +0600</pubDate>
+      <title>Node.js Best Practices</title>
+      <link>https://reidpig8350.github.io/blog/nodebestpractice/</link>
+      <pubDate>Wed, 17 Mar 2021 10:07:47 +0600</pubDate>
       
-      <guid>https://reidpig8350.github.io/blog/lastmonth/</guid>
-      <description>以 Python 為例，抓取上個月週期</description>
+      <guid>https://reidpig8350.github.io/blog/nodebestpractice/</guid>
+      <description>甚麼是 node.js? JavaScript 是前端工程的靈魂，主要目的是控制網頁的行為以及邏輯，例如產生動畫或者和使用者互動，是網路世界的共通語言。然而強大的 JavaScript 卻只出現在瀏覽器之中，在過去是個目的單純的程式語言，只當你在開啟電腦連上網路後，才會發揮作用。
+node.js 在尾巴附有 js 正是 JavaScript 的縮寫，他與 JavaScript 的關係密不可分，幾乎說是同一種語言。然而他克服了只能在瀏覽器上的限制，可以在其他環境下運行，其中最重要的應用，就是可以做為伺服器編程語言。與 PHP 最大的差別是，他是 non-blocking 語言，可以同時執行多項命令的特色，可以承載高並行伺服器。</description>
     </item>
     
     <item>

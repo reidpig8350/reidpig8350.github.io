@@ -3,12 +3,12 @@
   <meta charset="utf-8">
 
   
-  <title>Categories</title>
+  <title>監聽網頁元素變化</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
-    content="This is meta description">
+    content="JavaScript, MutationObserver">
   
   <meta name="author" content="Reid Chu">
   <meta name="generator" content="Hugo 0.80.0" />
@@ -127,85 +127,91 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
+      <div class="col-lg-8 mx-auto">
         
-        <div class="card-body px-0">
-            
-            <a href="https://reidpig8350.github.io/categories/blog/" class="h5 d-block my-3">blog</a>
-            <div class="mb-3 post-meta">
-                <span>By Reid Chu</span>
-                
-                <span class="border-bottom border-primary px-2 mx-1"></span>
-                <span>0001-01-01</span>
-                
-            </div>
-            <p class="card-text"></p>
-            <a href="https://reidpig8350.github.io/categories/blog/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+        <a href="/categories/blog"
+          class="text-primary">Blog</a>
+        
+        <h2>監聽網頁元素變化</h2>
+        <div class="mb-3 post-meta">
+          <span>By Reid Chu</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>01 March 2021</span>
           
         </div>
-      </div>
-      
-      <div class="col-lg-4">
-  
-  <div class="widget">
-    
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Category</h4>
-    <ul class="list-unstyled">
-      <li><a href="/categories/blog">Blog</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Tag</h4>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/git">Git</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/javascript">Javascript</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/programming">Programming</a></li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Social</h4>
-    <ul class="list-inline social-links">
-      
-      <li class="list-inline-item"><a href="https://github.com/reidpig8350"><i class="ti-github"></i></a></li>
-      
-    </ul>
-  </div>
-  
-  
-</div>
-      
-
-      
-      <div class="col-12 mt-5">
         
+        <div class="content mb-5">
+          <p><!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<h5 id="為什麼需要-mutationobserver">為什麼需要 MutationObserver？</h5>
+<p>網站可以透過 JavaScript 監聽事件，達到理想的互動或者動畫，常用的監聽事件包含點擊、鍵盤輸入或者內容變更。事件監聽除了 JavaScript 原生的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="addEventListener">addEventListener</a> 之外，<a href="https://jquery.com/" title="jQuery">jQuery</a> 也是熱門的人選。但是監聽元素事件的限制是，必須在元素存在之下，才可以對它「建立事件監聽」。</p>
+<p>常見的困擾可能是，元素並不是一開始就存有，而是<strong>經過定時倒數，或者使用者互動之後才插入的元素</strong>。因此監聽事件就不可以發生在元素存在之前，如下圖。當沒有元素時，當然也就沒有辦法對它監聽事件。</p>
+<p><img src="https://reidpig8350.github.io/images/post/js_mutationobserver/non-existed.JPG" alt="image"></p>
+<p>因此在監聽事件之前，你可以先對 <code>document.body</code> 監聽變化，例如一旦 attributes 或者 childList 有所改變，再透過 query 選擇目標的元素，並且監聽事件。</p>
+<ol>
+<li>待動畫跳出</li>
+<li><code>MutationObserver</code>偵測到變化</li>
+<li>對目標元素事件監聽</li>
+</ol>
+<p><!-- raw HTML omitted --><br>
+<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h4 id="mutationobserverhttpsdevelopermozillaorgzh-twdocswebapimutationobserver-mutationobserver"><a href="https://developer.mozilla.org/zh-TW/docs/Web/API/MutationObserver" title="MutationObserver">MutationObserver</a></h4>
+<p><code>MutationObserver</code> 屬於物件，因此需要在使用之前先行宣告。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">observer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MutationObserver</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutations</span>){
+  <span style="color:#a6e22e">mutations</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutation</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">type</span>)
+  })
+})
+</code></pre></div><p><code>MutationObserver</code> 的 call-back function 代表當監測到變化時，需要作出甚麼反應。例如以上 MDN 的例子，就是當元素發生變化時，就把變化的種類輸入在 <code>console.log</code> 之中。其中<code>mutation.type</code>代表元素變化的種類，常見的<strong>變化分別是 attributes、childList 以及 characterData</strong>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">animation</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){}
 
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">attrObserver</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MutationObserver</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutations</span>){
+  <span style="color:#a6e22e">mutations</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutation</span>){
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;attributes&#34;</span>){
+      <span style="color:#a6e22e">animation</span>()
+    }
+  })
+})
+</code></pre></div><p>以上的 code 可以用在偵測元素的 attribute 變化時，就執行動畫。
+了解以上內容後，就可以帶入一個實際例子：進入頁面 3 秒後，跳出「恭喜中獎」，確認後執行動畫。</p>
+<h5 id="監聽變化流程">監聽變化流程</h5>
+<ol>
+<li>一開始沒有「中獎」元素，觀察 body 變化</li>
+<li>當「中獎」元素 (class=&ldquo;prize&rdquo;) 出現，監聽點擊事件</li>
+<li>點擊確認後，執行動畫</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">animation</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Animation&#34;</span>)}
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">attrObserver</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MutationObserver</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutations</span>){
+  <span style="color:#a6e22e">mutations</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutation</span>){
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;attributes&#34;</span>) {
+      <span style="color:#75715e">// attrObserver 發現變化時，執行動畫函數
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">animation</span>()
+    }
+  })
+})
 
+<span style="color:#75715e">// 建立完 MutationObserver 之後，就要找到目標
+</span><span style="color:#75715e">// config 為 true 就代表你要監聽哪些變化
+</span><span style="color:#75715e">// MutationObserver.observe(target, config)
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">observerTarget</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.prize&#34;</span>)
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">observerConfig</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">attributes</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">childList</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">characterData</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> }
+<span style="color:#a6e22e">attrObserver</span>.<span style="color:#a6e22e">observe</span>(<span style="color:#a6e22e">observerTarget</span>, <span style="color:#a6e22e">observerConfig</span>)
+</code></pre></div>
+        </div>
+
+        
+        
       </div>
     </div>
   </div>
 </section>
-
 
 
 
