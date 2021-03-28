@@ -8,9 +8,21 @@
     <language>zh-tw</language>
     <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate><atom:link href="https://reidpig8350.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hugo Global Variables</title>
+      <link>https://reidpig8350.github.io/blog/hugo/</link>
+      <pubDate>Thu, 18 Mar 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://reidpig8350.github.io/blog/hugo/</guid>
+      <description>_index.md
+.Site 如果只有 .Site 就代表呼叫所有範圍的變數，因此你可以在 .Site 後面再加上範圍，更精準的呼叫你需要的變數。如以下範例：
+.Site.Pages 只會呼叫同一層級的變數，如果是再下一層資料夾，那就不在此範圍。
+.Site.RegularPages 呼叫 99% regular pages 的變數，因此是必須牢記的指令。其中 1% 指的是_index.</description>
+    </item>
+    
+    <item>
       <title>Node.js Best Practices</title>
       <link>https://reidpig8350.github.io/blog/nodebestpractice/</link>
-      <pubDate>Wed, 17 Mar 2021 10:07:47 +0600</pubDate>
+      <pubDate>Thu, 18 Mar 2021 10:07:47 +0600</pubDate>
       
       <guid>https://reidpig8350.github.io/blog/nodebestpractice/</guid>
       <description>甚麼是 node.js? JavaScript 是前端工程的靈魂，主要目的是控制網頁的行為以及邏輯，例如產生動畫或者和使用者互動，是網路世界的共通語言。然而強大的 JavaScript 卻只出現在瀏覽器之中，在過去是個目的單純的程式語言，只當你在開啟電腦連上網路後，才會發揮作用。

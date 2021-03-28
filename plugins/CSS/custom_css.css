@@ -2,3 +2,7 @@
 .highlight pre code{
     color:#00af91 !important;
 }
+
+.card-body a{
+    font-size: 25px;
+}
