@@ -3,12 +3,12 @@
   <meta charset="utf-8">
 
   
-  <title>Hugo Global Variables</title>
+  <title>Stable Matching</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
-    content="Hugo Global Variables">
+    content="Algorithm, Stable Matching, Gale–Shapley algorithm">
   
   <meta name="author" content="Reid Chu">
   <meta name="generator" content="Hugo 0.80.0" />
@@ -132,64 +132,45 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         
-        <a href="/categories/blog"
-          class="text-primary">Blog</a>
+        <a href="/categories/algotithim"
+          class="text-primary">Algotithim</a>
         
-        <h2>Hugo Global Variables</h2>
+        <h2>Stable Matching</h2>
         <div class="mb-3 post-meta">
           <span>By Reid Chu</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>18 March 2021</span>
+          <span>22 May 2021</span>
           
         </div>
         
         <div class="content mb-5">
-          <p><a href="https://gohugo.io/content-management/organization#index-pages-_indexmd" title="#index-pages-_indexmd">_index.md</a></p>
-<h3 id="site">.Site</h3>
-<p>如果只有 <code>.Site</code> 就代表呼叫所有範圍的變數，因此你可以在 <code>.Site</code> 後面再加上範圍，更精準的呼叫你需要的變數。如以下範例：</p>
-<h5 id="sitepages"><code>.Site.Pages</code></h5>
-<p>只會呼叫同一層級的變數，如果是再下一層資料夾，那就不在此範圍。</p>
-<h5 id="siteregularpages"><code>.Site.RegularPages</code></h5>
-<p>呼叫 99% regular pages 的變數，因此是必須牢記的指令。其中 1% 指的是<a href="https://gohugo.io/content-management/organization#index-pages-_indexmd" title="#index-pages-_indexmd"> _index.md </a>之中的變數不會被呼叫。</p>
-<h5 id="siteregularpagesrecursive"><code>.Site.RegularPagesRecursive</code></h5>
-<p>包含所有 100% regular pages 的變數。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">        {{ range ( where .Site.RegularPages &#34;Type&#34; &#34;featured&#34; )}}
-        &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card featured-post&#34;</span>&gt;
-          &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row no-gutters align-items-center&#34;</span>&gt;
-            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-md-5&#34;</span>&gt;
-              {{ if .Params.Image }}
-              &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Params.Image | absURL }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-img&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Title | markdownify }}&#34;</span>&gt;
-              {{ end }}
-            &lt;/<span style="color:#f92672">div</span>&gt;
-            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-md-6 offset-md-1&#34;</span>&gt;
-              &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-body&#34;</span>&gt;
-                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3 post-meta&#34;</span>&gt;
-                  &lt;<span style="color:#f92672">span</span>&gt;By {{ .Site.Params.Author }}&lt;/<span style="color:#f92672">span</span>&gt;
-                  {{ if not .Params.HideDate }}
-                  &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border-bottom border-primary px-2 mx-1&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
-                  &lt;<span style="color:#f92672">span</span>&gt;{{ .PublishDate.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">span</span>&gt;
-                  {{ end }}
-                &lt;/<span style="color:#f92672">div</span>&gt;
-                &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>
-                  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;h1 font-weight-bold d-block text-dark mb-4 card-title&#34;</span>&gt;{{ .Title | markdownify }}&lt;/<span style="color:#f92672">a</span>&gt;
-                &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-text&#34;</span>&gt;{{.Description}}...&lt;/<span style="color:#f92672">p</span>&gt;
-              &lt;/<span style="color:#f92672">div</span>&gt;
-            &lt;/<span style="color:#f92672">div</span>&gt;
-          &lt;/<span style="color:#f92672">div</span>&gt;
-        &lt;/<span style="color:#f92672">article</span>&gt;
-        {{ end }}
-</code></pre></div><p>The above .Site. .. page collections can be accessed from any scope in the templates.</p>
-<p>Below variables return a collection of pages only from the scope of the current list page:</p>
-<p>.Pages
-Collection of regular pages and only first-level section pages under the current list page.
-.RegularPages
-Collection of only regular pages under the current list page. This excludes regular pages in nested sections/list pages (those are subdirectories with an _index.md file.
-.RegularPagesRecursive
-Collection of all regular pages under a list page. This includes regular pages in nested sections/list pages.
-This feature was added in Hugo version 0.68.0</p>
-<p>Note
-From the scope of regular pages, .Pages and .RegularPages return an empty slice.</p>
+          <h4 id="proof-the-correctness-of-stable-matching-process">Proof the correctness of Stable Matching process.</h4>
+<p><!-- raw HTML omitted --></p>
+<h4 id="反證法">反證法：</h4>
+<p><!-- raw HTML omitted --></p>
+<h5 id="假設完成所有配對後有至少一對男女互相喜歡更勝於自己的伴侶精神出軌m-w--m-w-兩對">假設完成所有配對後，有至少一對男女互相喜歡，更勝於自己的伴侶（精神出軌）。(m, w) &amp; (m', w') 兩對。</h5>
+<h5 id="根據題意還有假設可以得到以下兩點">根據題意還有假設可以得到以下兩點：</h5>
+<ol>
+<li>根據假設他們更喜歡彼此 (m', w)</li>
+<li>m' 最後的求婚對象是 w'，所以才會有 (m', w')</li>
+</ol>
+<h5 id="模擬求婚過程有兩種可能">模擬求婚過程，有兩種可能：</h5>
+<ol>
+<li>
+<p>m' 從來不曾向 w 求婚過：</p>
+<p>因為男生求婚會從最喜歡的開始，依據題意結果 m': w'&gt;w</p>
+<p>但是卻假設 m': w&gt;w'</p>
+<p>兩者互相矛盾。</p>
+</li>
+<li>
+<p>m' 曾經向 w 求婚過:</p>
+<p>曾經求婚卻被拒絕，代表 w: m&gt;m'</p>
+<p>但是卻假設 w: m'&gt;m</p>
+<p>兩者互相矛盾。</p>
+</li>
+</ol>
+<h5 id="因此不論是否-m-曾經向-w-求婚過都會得到矛盾的假設因此假設錯誤不會有任何一對男女互相喜歡更勝於自己的伴侶">因此不論是否 m' 曾經向 w 求婚過，都會得到矛盾的假設，因此假設錯誤，不會有任何一對男女互相喜歡更勝於自己的伴侶。</h5>
 
         </div>
 

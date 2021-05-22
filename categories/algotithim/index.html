@@ -3,12 +3,12 @@
   <meta charset="utf-8">
 
   
-  <title>Hugo Global Variables</title>
+  <title>Algotithim</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
-    content="Hugo Global Variables">
+    content="This is meta description">
   
   <meta name="author" content="Reid Chu">
   <meta name="generator" content="Hugo 0.80.0" />
@@ -127,78 +127,97 @@
 </header>
 <!-- /navigation -->
 
+
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto">
-        
-        <a href="/categories/blog"
-          class="text-primary">Blog</a>
-        
-        <h2>Hugo Global Variables</h2>
-        <div class="mb-3 post-meta">
-          <span>By Reid Chu</span>
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="row">
           
-          <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>18 March 2021</span>
+          
+          <div class="col-md-6 mb-4">
+    <article class="card">
+        
+        <div class="card-body px-0">
+            
+            <a href="/categories/algotithim"
+                class="text-primary">Algotithim</a>
+            
+            <a href="https://reidpig8350.github.io/blog/stable_matching/" class="h5 d-block my-3">Stable Matching</a>
+            <div class="mb-3 post-meta">
+                <span>By Reid Chu</span>
+                
+                <span class="border-bottom border-primary px-2 mx-1"></span>
+                <span>2021-05-22</span>
+                
+            </div>
+            <p class="card-text">Algorithm, Stable Matching, Gale–Shapley algorithm</p>
+            <a href="https://reidpig8350.github.io/blog/stable_matching/" class="btn btn-outline-primary">read more</a>
+        </div>
+    </article>
+</div>
           
         </div>
-        
-        <div class="content mb-5">
-          <p><a href="https://gohugo.io/content-management/organization#index-pages-_indexmd" title="#index-pages-_indexmd">_index.md</a></p>
-<h3 id="site">.Site</h3>
-<p>如果只有 <code>.Site</code> 就代表呼叫所有範圍的變數，因此你可以在 <code>.Site</code> 後面再加上範圍，更精準的呼叫你需要的變數。如以下範例：</p>
-<h5 id="sitepages"><code>.Site.Pages</code></h5>
-<p>只會呼叫同一層級的變數，如果是再下一層資料夾，那就不在此範圍。</p>
-<h5 id="siteregularpages"><code>.Site.RegularPages</code></h5>
-<p>呼叫 99% regular pages 的變數，因此是必須牢記的指令。其中 1% 指的是<a href="https://gohugo.io/content-management/organization#index-pages-_indexmd" title="#index-pages-_indexmd"> _index.md </a>之中的變數不會被呼叫。</p>
-<h5 id="siteregularpagesrecursive"><code>.Site.RegularPagesRecursive</code></h5>
-<p>包含所有 100% regular pages 的變數。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">        {{ range ( where .Site.RegularPages &#34;Type&#34; &#34;featured&#34; )}}
-        &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card featured-post&#34;</span>&gt;
-          &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row no-gutters align-items-center&#34;</span>&gt;
-            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-md-5&#34;</span>&gt;
-              {{ if .Params.Image }}
-              &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Params.Image | absURL }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-img&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Title | markdownify }}&#34;</span>&gt;
-              {{ end }}
-            &lt;/<span style="color:#f92672">div</span>&gt;
-            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col-md-6 offset-md-1&#34;</span>&gt;
-              &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-body&#34;</span>&gt;
-                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3 post-meta&#34;</span>&gt;
-                  &lt;<span style="color:#f92672">span</span>&gt;By {{ .Site.Params.Author }}&lt;/<span style="color:#f92672">span</span>&gt;
-                  {{ if not .Params.HideDate }}
-                  &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border-bottom border-primary px-2 mx-1&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
-                  &lt;<span style="color:#f92672">span</span>&gt;{{ .PublishDate.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">span</span>&gt;
-                  {{ end }}
-                &lt;/<span style="color:#f92672">div</span>&gt;
-                &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>
-                  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;h1 font-weight-bold d-block text-dark mb-4 card-title&#34;</span>&gt;{{ .Title | markdownify }}&lt;/<span style="color:#f92672">a</span>&gt;
-                &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card-text&#34;</span>&gt;{{.Description}}...&lt;/<span style="color:#f92672">p</span>&gt;
-              &lt;/<span style="color:#f92672">div</span>&gt;
-            &lt;/<span style="color:#f92672">div</span>&gt;
-          &lt;/<span style="color:#f92672">div</span>&gt;
-        &lt;/<span style="color:#f92672">article</span>&gt;
-        {{ end }}
-</code></pre></div><p>The above .Site. .. page collections can be accessed from any scope in the templates.</p>
-<p>Below variables return a collection of pages only from the scope of the current list page:</p>
-<p>.Pages
-Collection of regular pages and only first-level section pages under the current list page.
-.RegularPages
-Collection of only regular pages under the current list page. This excludes regular pages in nested sections/list pages (those are subdirectories with an _index.md file.
-.RegularPagesRecursive
-Collection of all regular pages under a list page. This includes regular pages in nested sections/list pages.
-This feature was added in Hugo version 0.68.0</p>
-<p>Note
-From the scope of regular pages, .Pages and .RegularPages return an empty slice.</p>
+      </div>
+      
+      <div class="col-lg-4">
+  
+  <div class="widget">
+    
+    <h4 class="widget-title">About Me</h4>
+    
+    <p>Hi 我是Reid</p>
+    <a href="https://reidpig8350.github.io/about/" class="btn btn-outline-primary">Know More</a>
+    
+  </div>
+  
+  <div class="widget">
+    <h4 class="widget-title">Category</h4>
+    <ul class="list-unstyled">
+      <li><a href="/categories/algotithim">Algotithim</a>
+      </li>
+      <li><a href="/categories/blog">Blog</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="widget">
+    <h4 class="widget-title">Tag</h4>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/algotithim">Algotithim</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/git">Git</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/javascript">Javascript</a></li>
+      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
+          href="/tags/programming">Programming</a></li>
+    </ul>
+  </div>
+  
+  <div class="widget">
+    <h4 class="widget-title">Social</h4>
+    <ul class="list-inline social-links">
+      
+      <li class="list-inline-item"><a href="https://github.com/reidpig8350"><i class="ti-github"></i></a></li>
+      
+    </ul>
+  </div>
+  
+  
+</div>
+      
 
-        </div>
+      
+      <div class="col-12 mt-5">
+        
 
-        
-        
+
       </div>
     </div>
   </div>
 </section>
+
 
 
 
