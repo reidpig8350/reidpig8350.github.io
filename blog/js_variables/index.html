@@ -3,12 +3,12 @@
   <meta charset="utf-8">
 
   
-  <title>Node.js Best Practices</title>
+  <title>JS變數的性質</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
-    content="node.js, GitHub">
+    content="JavaScript">
   
   <meta name="author" content="Reid Chu">
   <meta name="generator" content="Hugo 0.80.0" />
@@ -132,28 +132,63 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         
-        <a href="/categories/blog"
-          class="text-primary">Blog</a>
+        <a href="/categories/javascript"
+          class="text-primary">Java script</a>
         
-        <h2>Node.js Best Practices</h2>
+        <h2>JS變數的性質</h2>
         <div class="mb-3 post-meta">
           <span>By Reid Chu</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>18 March 2021</span>
+          <span>06 June 2021</span>
           
         </div>
         
         <div class="content mb-5">
           <p><!-- raw HTML omitted --><br>
 <!-- raw HTML omitted --></p>
-<h5 id="甚麼是-nodejs">甚麼是 node.js?</h5>
-<p>JavaScript 是前端工程的靈魂，主要目的是控制網頁的行為以及邏輯，例如產生動畫或者和使用者互動，是網路世界的共通語言。然而強大的 JavaScript 卻只出現在瀏覽器之中，在過去是個目的單純的程式語言，只當你在開啟電腦連上網路後，才會發揮作用。</p>
-<p><a href="https://zh.wikipedia.org/zh-tw/Node.js" title="Node.js維基百科">node.js</a> 在尾巴附有 js 正是 JavaScript 的縮寫，他與 JavaScript 的關係密不可分，幾乎說是同一種語言。然而他克服了只能在瀏覽器上的限制，可以在其他環境下運行，其中最重要的應用，就是可以做為伺服器編程語言。與 PHP 最大的差別是，他是 non-blocking 語言，可以同時執行多項命令的特色，可以承載高並行伺服器。</p>
-<h5 id="nodejs-best-practiceshttpsgithubcomgoldbergyoninodebestpractices-nodejs-best-practices-on-github"><a href="https://GitHub.com/goldbergyoni/nodebestpractices" title="Node.js Best Practices on GitHub">Node.js Best Practices</a></h5>
-<p>Node.js Best Practices 是一套使用 node.js 的餐桌禮儀，對常見的狀況<strong>作出簡潔的結論</strong>，沒有任何一個項目是三個段落以上，因此比較適合已經有寫過幾項 node.js 作業的學習者，若是剛開始的新手，可以在學習一個月之後回顧。</p>
-<p>最大的特色就是援引各方的範例，每一個項目都會有 🔗Read More 讓你連結到實際的程式碼，例如 StackOverflow 的文章或者其他 GitHub 專案。</p>
-<p><img src="https://github.com/goldbergyoni/nodebestpractices/raw/master/assets/images/banner-2.jpg" alt="image"></p>
+<h3 id="變數值">變數值</h3>
+<ol>
+<li>
+<p>如果變數沒有被指定任何值，為 undefined</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">notDesignated</span>;
+
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">notDesignated</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">undefined</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;變數未指定特定值&#34;</span>);
+};
+</code></pre></div></li>
+<li>
+<p>undefined 對應 Boolean 為 false</p>
+</li>
+<li>
+<p>被賦予 undefined 的變數與數值運算後回傳 NaN</p>
+</li>
+<li>
+<p>如果 null 與數值運算，null 會被視為 0，且 null 之 Boolean 為 false</p>
+</li>
+</ol>
+<h3 id="動態型別">動態型別</h3>
+<p>JavaScript 是動態型別的語言，在宣告變數時並不需要指定型別，會依據輸入值而自動改變。因此當 String 與 Number 同時操作時容易混淆。</p>
+<ol>
+<li>
+<p>同時使用 Number 與 String 時，JavaScript 會將 Number 視為 String</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;The answer is &#34;</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">42</span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>)  <span style="color:#75715e">// &#34;The answer is 42
+</span></code></pre></div></li>
+<li>
+<p>其他運算子例如減號，就不會將 Number 視為 String，也就是可以直接運算。但相反的，使用加號的話，卻會被轉換為字串</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#e6db74">&#34;108&#34;</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">8</span> <span style="color:#75715e">//100
+</span><span style="color:#75715e"></span><span style="color:#e6db74">&#34;108&#34;</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">8</span> <span style="color:#75715e">//1088
+</span></code></pre></div></li>
+<li>
+<p>綜合以上兩點，依據不同情況需指定變數的型別，避免混淆</p>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseInt"><code>parseInt()</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat"><code>parseFloat()</code></a></li>
+</ul>
+</li>
+</ol>
+<!-- raw HTML omitted -->
 
         </div>
 
