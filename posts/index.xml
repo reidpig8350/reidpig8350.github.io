@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Metrics Whisper</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Metrics Whisper</description>
+    <generator>Hugo -- 0.140.1</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何用 GTM 設定 GA4 事件</title>
+      <link>/posts/gtm/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/gtm/</guid>
+      <description>以瀏覽事件為例，利用 GTM 快速設定 GA4 事件，精準追蹤使用者行為。</description>
+    </item>
+    <item>
+      <title>為什麼 GA4 事件追蹤這麼重要？</title>
+      <link>/posts/ga-impact/</link>
+      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>/posts/ga-impact/</guid>
+      <description>GA4 預設的流量報表已經很豐富，但它無法完全反映使用者在網站上的所有互動。如果想深入了解訪客行為，就需要透過事件追蹤來記錄「網站上的大小事」。</description>
+    </item>
+  </channel>
+</rss>
