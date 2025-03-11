@@ -6,17 +6,17 @@
     <description>Recent content in 事件追蹤 on Metrics Whisper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>如何用 GTM 設定 GA4 事件</title>
-      <link>/posts/gtm/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/posts/gtm/</guid>
-      <description>以瀏覽事件為例，利用 GTM 快速設定 GA4 事件，精準追蹤使用者行為。</description>
+      <title>GTM的更新，你需要採取行動嗎？</title>
+      <link>/posts/gtm-update-for-ads/</link>
+      <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/gtm-update-for-ads/</guid>
+      <description>這次（GTM）的更新將從 2025 年 4 月 10 日起，包含 Google Ads 和 Floodlight 代碼的 GTM 容器自動載入 Google 代碼，然後再傳送事件。這樣的改變有什麼影響？你需要採取行動嗎？</description>
     </item>
     <item>
-      <title>為什麼 GA4 事件追蹤這麼重要？</title>
+      <title>為什麼 GA4 事件追蹤這麼重要？要怎麼應用在電商經營？</title>
       <link>/posts/ga-impact/</link>
       <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
       <guid>/posts/ga-impact/</guid>

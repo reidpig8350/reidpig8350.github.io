@@ -121,22 +121,6 @@
                     <span>Articles</span>
                 </a>
             </li>
-            <li>
-                <a href="/tags/" title="Tags">
-                    <span>Tags</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://example.org" title="example.org">
-                    <span>example.org</span>&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
@@ -149,32 +133,36 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">如何用 GTM 設定 GA4 事件
+    <h2 class="entry-hint-parent">GTM的更新，你需要採取行動嗎？
     </h2>
   </header>
   <div class="entry-content">
-    <p>在 GTM 中設定 GA4 事件非常直觀。首先，進入 GTM 後新增「Google Analytics: GA4 事件」標籤，並綁定您的 GA4 設定碼。以瀏覽事件為例，請將事件名稱設定為 page_view，並於事件參數中填入頁面標題、URL 等關鍵數據。隨後，建立一個觸發器，建議設為所有頁面載入時自動啟動，或根據需求指定特定頁面。啟用預覽模式後，確認標籤正確觸發並將數據傳送至 GA4，再檢視數據是否完整呈現。確認測試無誤後，即可提交發布。透過此流程，您能精準追蹤瀏覽行為，進而優化網站設計與行銷策略。
+    <p>這次 GTM 變更的好處 這項 GTM 變更的主要目標是 提高數據追蹤的準確性，簡化管理流程。如果你的網站依賴 Google Ads 進行廣告投放，這次更新應該是個好消息！建議你提前測試變更，確保你的轉換追蹤數據沒有受到影響。 ✅ 你的廣告成效評估更穩定。 過去，GTM 會先傳送事件，然後載入 Google 代碼，這可能會影響追蹤數據的完整性。現在改為 先載入 Google 代碼，再傳送事件，能夠提升 Google Ads 轉換追蹤的準確性，讓
+✅ 你的廣告表現評估更加全面、提供更完整的分析 由於 Google 代碼將更早載入，對於許多網站而言，這可能意味著更多的用戶數據會被成功收集，讓你的廣告表現評估更加全面。
+✅ 更輕鬆的設定體驗 這次更新還帶來了一些 一鍵存取功能，例如在 Google 代碼設定頁面就能啟用強化轉換、跨網站追蹤、自動事件等功能，讓操作更簡單。
+你需要採取行動嗎？ 🔹 如果你的 GTM 容器已經包含 Google Ads 或 Floodlight 代碼，這項變更會 自動生效，你不需要手動更新任何設定，但建議提前在 GTM 容器中新增加載 Google 代碼，預覽這項變更是否會影響你的追蹤數據。
+🔹 如果你不想要這項更新，目前沒有關閉的選項，2025 年 4 月 10 日起，這項變更將直接套用。
+🔹 如果你的 GTM 主要用來處理其他工具（如 GA4、Facebook Pixel），這次更新不會影響你的設定，可以放心繼續使用。
 </p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-22 00:00:00 +0000 UTC'>February 22, 2025</span>&nbsp;·&nbsp;Reid</footer>
-  <a class="entry-link" aria-label="post link to 如何用 GTM 設定 GA4 事件" href="/posts/gtm/"></a>
+  <footer class="entry-footer"><span title='2025-03-11 00:00:00 +0000 UTC'>March 11, 2025</span>&nbsp;·&nbsp;Reid</footer>
+  <a class="entry-link" aria-label="post link to GTM的更新，你需要採取行動嗎？" href="/posts/gtm-update-for-ads/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">為什麼 GA4 事件追蹤這麼重要？
+    <h2 class="entry-hint-parent">為什麼 GA4 事件追蹤這麼重要？要怎麼應用在電商經營？
     </h2>
   </header>
   <div class="entry-content">
-    <p>為什麼要設定 GA4 事件？ 💡 優化行銷轉換率
-追蹤 按鈕點擊，了解訪客是否對 CTA（行動號召）有興趣。 監測 表單填寫，找出哪些頁面轉換率較低，進而優化內容。 💡 提升使用者體驗
-觀察 滾動深度，判斷文章是否吸引讀者繼續閱讀。 分析 影片觀看行為，了解訪客是否對內容感興趣。 💡 更精準的數據決策
-透過事件數據，分析哪些內容、產品或行銷活動最有效。 結合 Google Ads 再行銷，根據訪客的互動行為精準投放廣告。 GA4 事件追蹤能讓你更精確地掌握訪客行為，而不僅僅是瀏覽數或跳出率。無論是 提升轉換率、優化用戶體驗，還是做出更好的數據決策，都離不開事件追蹤。
-👉 下一篇將介紹 如何用 GTM 設定 GA4 事件 ，幫助你快速上手！
+    <p>GA4 事件追蹤能讓你不只看流量，更能 精準掌握顧客行為，優化轉換率，提升營收！
+📊 更精準的數據決策 分析哪些商品、優惠活動或行銷策略最有效。 結合 Google Ads 再行銷 ➝ 根據訪客的瀏覽與購物行為，精準投放廣告。 🚀 優化行銷轉換率 監測表單填寫 ➝ 調整內容或流程，提高成交機會。 分析購物車行為 ➝ 觀察顧客何時放棄購物車，優化結帳流程。 🎯 提升使用者體驗 滾動深度分析 ➝ 知道訪客是否有認真看完你的商品介紹或部落格文章。 影片觀看行為 ➝ 確保行銷影片真的吸引到受眾，而不只是被略過。 測試不同版面設計 ➝ 透過 A/B 測試追蹤點擊與互動，找出最適合的 UI 設計。 想提升電商銷售，不能只看「流量」和「跳出率」！GA4 事件追蹤幫助你 精準掌握顧客行為，提升轉換率，做出更聰明的行銷決策。
+📌 立即開始追蹤 GA4 事件，讓數據為你的商店賺更多！
+👉 下一篇將介紹 如何用 GTM 設定 GA4 事件 ，快速上手！
 </p>
   </div>
   <footer class="entry-footer"><span title='2023-03-02 00:00:00 +0000 UTC'>March 2, 2023</span>&nbsp;·&nbsp;Reid</footer>
-  <a class="entry-link" aria-label="post link to 為什麼 GA4 事件追蹤這麼重要？" href="/posts/ga-impact/"></a>
+  <a class="entry-link" aria-label="post link to 為什麼 GA4 事件追蹤這麼重要？要怎麼應用在電商經營？" href="/posts/ga-impact/"></a>
 </article>
     </main>
     

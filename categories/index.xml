@@ -6,20 +6,34 @@
     <description>Recent content in Categories on Metrics Whisper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GA4</title>
       <link>/categories/ga4/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
       <guid>/categories/ga4/</guid>
       <description></description>
     </item>
     <item>
       <title>事件追蹤</title>
       <link>/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
       <guid>/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GTM</title>
+      <link>/categories/gtm/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/categories/gtm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>電商成長</title>
+      <link>/categories/%E9%9B%BB%E5%95%86%E6%88%90%E9%95%B7/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/categories/%E9%9B%BB%E5%95%86%E6%88%90%E9%95%B7/</guid>
       <description></description>
     </item>
   </channel>
