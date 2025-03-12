@@ -16,6 +16,13 @@
       <description>本篇文章將教你如何透過 Google 代碼管理工具（GTM），無需修改原始碼，就能輕鬆追蹤 Navbar 的按鈕點擊。</description>
     </item>
     <item>
+      <title>GTM的更新，你需要採取行動嗎？</title>
+      <link>/posts/gtm-update-for-ads/</link>
+      <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/gtm-update-for-ads/</guid>
+      <description>這次（GTM）的更新將從 2025 年 4 月 10 日起，包含 Google Ads 和 Floodlight 代碼的 GTM 容器自動載入 Google 代碼，然後再傳送事件。這樣的改變有什麼影響？你需要採取行動嗎？</description>
+    </item>
+    <item>
       <title>使用者體驗如何? 透過GTM追蹤網頁瀏覽事件分析</title>
       <link>/posts/gtm-pageview/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
