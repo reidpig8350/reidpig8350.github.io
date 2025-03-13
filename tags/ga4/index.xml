@@ -9,6 +9,13 @@
     <lastBuildDate>Wed, 12 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/ga4/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>匯入 (GTM) 工作區？請務必選擇「合併」！</title>
+      <link>/posts/import-gtm-workspace/</link>
+      <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/import-gtm-workspace/</guid>
+      <description>本篇教學將示範如何透過 Google Tag Manager（GTM）實現 Navbar 按鈕點擊追蹤，無需修改原始碼，輕鬆掌握使用者行為！</description>
+    </item>
+    <item>
       <title>匯入即用！GTM追蹤 Navbar 按鈕點擊</title>
       <link>/posts/starter-pack/</link>
       <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
