@@ -3,31 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/categories/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/ga4/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/ga4/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/ga4-customize-dimension/</loc>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/gtm/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/index/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/import-gtm-workspace/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>

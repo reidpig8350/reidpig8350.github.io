@@ -156,6 +156,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">GA4 只收數據卻不顯示？你還要接住你的數據！
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在 GA4 中設定自訂定義：追蹤 click_text 為什麼需要自訂定義？ 當我們使用 Google Tag Manager（GTM）來追蹤使用者點擊行為時，通常會傳送 click_text（點擊的按鈕文字）作為事件參數。但 GA4 預設不會顯示這些參數，因此我們需要在 GA4 自訂定義中註冊它，才能在報表中查看數據。
+你可以參考 這篇文章 ，快速匯入Navbar追蹤懶人包，快速邁出第一步！
+步驟 1：確認 GTM 已正確傳送 click_text 方法 1：使用 GTM 預覽模式 打開 Google Tag Manager，點擊右上角的 預覽。 在你的網站上點擊 Navbar 的按鈕。 返回 GTM 預覽畫面，找到 click 事件，查看 click_text 是否有正確傳送。 方法 2：使用 GA4 DebugView 前往 GA4，點擊 管理 → DebugView。 在 DebugView 內，找到 click 事件，查看 click_text 是否出現在 事件參數 中。 如果 click_text 沒有顯示，請確認 GTM 的變數、觸發條件和標籤設定是否正確。
+步驟 2：在 GA4 設定自訂定義 進入 GA4 管理後台，點擊 自訂定義。 點擊右上角的 建立自訂定義。 名稱：輸入 Click Text（這是報表顯示的名稱）。 範疇：選擇 事件（因為 click_text 屬於事件參數）。 事件參數：輸入 click_text（名稱必須與 GTM 傳送的參數一致）。 點擊 儲存。 ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 00:00:00 +0000 UTC'>March 30, 2025</span>&nbsp;·&nbsp;Reid</footer>
+  <a class="entry-link" aria-label="post link to GA4 只收數據卻不顯示？你還要接住你的數據！" href="//localhost:1313/posts/ga4-customize-dimension/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">匯入GTM工作區？務必選擇「合併」！
     </h2>
   </header>

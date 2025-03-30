@@ -6,8 +6,15 @@
     <description>Recent content in GA4 on Metrics Whisper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/ga4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GA4 只收數據卻不顯示？你還要接住你的數據！</title>
+      <link>//localhost:1313/posts/ga4-customize-dimension/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ga4-customize-dimension/</guid>
+      <description>GA4 預設不會顯示 click_text，所以就算你有用 GTM 追蹤按鈕點擊，也可能在報表裡找不到數據。沒關係！這篇文章會帶你一步步設定 自訂定義，讓 GA4 乖乖顯示 click_text，讓你清楚知道使用者都點了哪些按鈕！</description>
+    </item>
     <item>
       <title>匯入GTM工作區？務必選擇「合併」！</title>
       <link>//localhost:1313/posts/import-gtm-workspace/</link>
