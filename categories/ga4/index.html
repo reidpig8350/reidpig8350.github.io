@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>GA4 | Metrics Whisper</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="//localhost:1313/categories/ga4/">
+<link rel="canonical" href="https://reidpig8350.github.io/categories/ga4/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="//localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://reidpig8350.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://reidpig8350.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://reidpig8350.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://reidpig8350.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://reidpig8350.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="//localhost:1313/categories/ga4/index.xml">
-<link rel="alternate" hreflang="en" href="//localhost:1313/categories/ga4/">
+<link rel="alternate" type="application/rss+xml" href="https://reidpig8350.github.io/categories/ga4/index.xml">
+<link rel="alternate" hreflang="en" href="https://reidpig8350.github.io/categories/ga4/">
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -65,7 +65,15 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://reidpig8350.github.io/categories/ga4/">
+  <meta property="og:site_name" content="Metrics Whisper">
+  <meta property="og:title" content="GA4">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GA4">
+<meta name="twitter:description" content="">
+
 </head>
 
 <body class="list" id="top">
@@ -83,7 +91,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="//localhost:1313/" accesskey="h" title="Metrics Whisper (Alt + H)">Metrics Whisper</a>
+            <a href="https://reidpig8350.github.io/" accesskey="h" title="Metrics Whisper (Alt + H)">Metrics Whisper</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -109,12 +117,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="//localhost:1313/posts/" title="Posts">
+                <a href="https://reidpig8350.github.io/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/tags/" title="Tags">
+                <a href="https://reidpig8350.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -134,13 +142,13 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>在 GA4 中設定自訂定義：追蹤 click_text 為什麼需要自訂定義？ 當我們使用 Google Tag Manager（GTM）來追蹤使用者點擊行為時，通常會傳送 click_text（點擊的按鈕文字）作為事件參數。但 GA4 預設不會顯示這些參數，因此我們需要在 GA4 自訂定義中註冊它，才能在報表中查看數據。
+    <p>為什麼需要自訂定義？ 當我們使用 Google Tag Manager（GTM）來追蹤使用者點擊行為時，通常會傳送 click_text（點擊的按鈕文字）作為事件參數。但 GA4 預設不會顯示這些參數，因此我們需要在 GA4 自訂定義中註冊它，才能在報表中查看數據。
 你可以參考 這篇文章 ，快速匯入Navbar追蹤懶人包，快速邁出第一步！
-步驟 1：確認 GTM 已正確傳送 click_text 方法 1：使用 GTM 預覽模式 打開 Google Tag Manager，點擊右上角的 預覽。 在你的網站上點擊 Navbar 的按鈕。 返回 GTM 預覽畫面，找到 click 事件，查看 click_text 是否有正確傳送。 方法 2：使用 GA4 DebugView 前往 GA4，點擊 管理 → DebugView。 在 DebugView 內，找到 click 事件，查看 click_text 是否出現在 事件參數 中。 如果 click_text 沒有顯示，請確認 GTM 的變數、觸發條件和標籤設定是否正確。
+步驟 1：確認 GTM 已正確傳送 click_text 方法 1：使用 GTM 預覽模式 打開 Google Tag Manager，點擊右上角的 預覽。 在你的網站上點擊 Navbar 的按鈕。 返回 GTM 預覽畫面，找到 連結點擊 事件，查看 click_text 是否有正確傳送。 方法 2：使用 GA4 DebugView 前往 GA4，點擊 管理 → DebugView。 在 DebugView 內，找到 click 事件，查看 click_text 是否出現在 事件參數 中。 如果 click_text 沒有顯示，請確認 GTM 的變數、觸發條件和標籤設定是否正確。
 步驟 2：在 GA4 設定自訂定義 進入 GA4 管理後台，點擊 自訂定義。 點擊右上角的 建立自訂定義。 名稱：輸入 Click Text（這是報表顯示的名稱）。 範疇：選擇 事件（因為 click_text 屬於事件參數）。 事件參數：輸入 click_text（名稱必須與 GTM 傳送的參數一致）。 點擊 儲存。 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-03-30 00:00:00 +0000 UTC'>March 30, 2025</span>&nbsp;·&nbsp;Reid</footer>
-  <a class="entry-link" aria-label="post link to GA4 只收數據卻不顯示？你還要接住你的數據！" href="//localhost:1313/posts/ga4-customize-dimension/"></a>
+  <a class="entry-link" aria-label="post link to GA4 只收數據卻不顯示？你還要接住你的數據！" href="https://reidpig8350.github.io/posts/ga4-customize-dimension/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -155,7 +163,7 @@
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-03-12 00:00:00 +0000 UTC'>March 12, 2025</span>&nbsp;·&nbsp;Reid</footer>
-  <a class="entry-link" aria-label="post link to 匯入GTM工作區？務必選擇「合併」！" href="//localhost:1313/posts/import-gtm-workspace/"></a>
+  <a class="entry-link" aria-label="post link to 匯入GTM工作區？務必選擇「合併」！" href="https://reidpig8350.github.io/posts/import-gtm-workspace/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -171,7 +179,7 @@
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-03-12 00:00:00 +0000 UTC'>March 12, 2025</span>&nbsp;·&nbsp;Reid</footer>
-  <a class="entry-link" aria-label="post link to 匯入即用！GTM追蹤 Navbar 按鈕點擊" href="//localhost:1313/posts/starter-pack/"></a>
+  <a class="entry-link" aria-label="post link to 匯入即用！GTM追蹤 Navbar 按鈕點擊" href="https://reidpig8350.github.io/posts/starter-pack/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -192,7 +200,7 @@
 </p>
   </div>
   <footer class="entry-footer"><span title='2025-03-11 00:00:00 +0000 UTC'>March 11, 2025</span>&nbsp;·&nbsp;Reid</footer>
-  <a class="entry-link" aria-label="post link to GTM的更新，你需要採取行動嗎？" href="//localhost:1313/posts/gtm-update-for-ads/"></a>
+  <a class="entry-link" aria-label="post link to GTM的更新，你需要採取行動嗎？" href="https://reidpig8350.github.io/posts/gtm-update-for-ads/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -206,7 +214,7 @@
 </p>
   </div>
   <footer class="entry-footer"><span title='2025-03-07 00:00:00 +0000 UTC'>March 7, 2025</span>&nbsp;·&nbsp;Reid</footer>
-  <a class="entry-link" aria-label="post link to 使用者體驗如何? 透過GTM追蹤網頁瀏覽事件分析" href="//localhost:1313/posts/gtm-pageview/"></a>
+  <a class="entry-link" aria-label="post link to 使用者體驗如何? 透過GTM追蹤網頁瀏覽事件分析" href="https://reidpig8350.github.io/posts/gtm-pageview/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -222,12 +230,12 @@
 </p>
   </div>
   <footer class="entry-footer"><span title='2023-03-02 00:00:00 +0000 UTC'>March 2, 2023</span>&nbsp;·&nbsp;Reid</footer>
-  <a class="entry-link" aria-label="post link to 為什麼 GA4 事件追蹤這麼重要？要怎麼應用在電商經營？" href="//localhost:1313/posts/ga-impact/"></a>
+  <a class="entry-link" aria-label="post link to 為什麼 GA4 事件追蹤這麼重要？要怎麼應用在電商經營？" href="https://reidpig8350.github.io/posts/ga-impact/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="//localhost:1313/">Metrics Whisper</a></span> · 
+        <span>&copy; 2025 <a href="https://reidpig8350.github.io/">Metrics Whisper</a></span> · 
 
     <span>
         Powered by

@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>事件追蹤 on Metrics Whisper</title>
-    <link>//localhost:1313/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</link>
+    <link>https://reidpig8350.github.io/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</link>
     <description>Recent content in 事件追蹤 on Metrics Whisper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en</language>
     <lastBuildDate>Sun, 30 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://reidpig8350.github.io/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GA4 只收數據卻不顯示？你還要接住你的數據！</title>
-      <link>//localhost:1313/posts/ga4-customize-dimension/</link>
+      <link>https://reidpig8350.github.io/posts/ga4-customize-dimension/</link>
       <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/ga4-customize-dimension/</guid>
+      <guid>https://reidpig8350.github.io/posts/ga4-customize-dimension/</guid>
       <description>GA4 預設不會顯示 click_text，所以就算你有用 GTM 追蹤按鈕點擊，也可能在報表裡找不到數據。沒關係！這篇文章會帶你一步步設定 自訂定義，讓 GA4 乖乖顯示 click_text，讓你清楚知道使用者都點了哪些按鈕！</description>
     </item>
     <item>
       <title>匯入GTM工作區？務必選擇「合併」！</title>
-      <link>//localhost:1313/posts/import-gtm-workspace/</link>
+      <link>https://reidpig8350.github.io/posts/import-gtm-workspace/</link>
       <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/import-gtm-workspace/</guid>
+      <guid>https://reidpig8350.github.io/posts/import-gtm-workspace/</guid>
       <description>本篇教學將示範如何透過 Google Tag Manager（GTM）實現 Navbar 按鈕點擊追蹤，無需修改原始碼，輕鬆掌握使用者行為！</description>
     </item>
     <item>
       <title>匯入即用！GTM追蹤 Navbar 按鈕點擊</title>
-      <link>//localhost:1313/posts/starter-pack/</link>
+      <link>https://reidpig8350.github.io/posts/starter-pack/</link>
       <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/starter-pack/</guid>
+      <guid>https://reidpig8350.github.io/posts/starter-pack/</guid>
       <description>本篇文章將教你如何透過 Google 代碼管理工具（GTM），無需修改原始碼，就能輕鬆追蹤 Navbar 的按鈕點擊。</description>
     </item>
     <item>
       <title>GTM的更新，你需要採取行動嗎？</title>
-      <link>//localhost:1313/posts/gtm-update-for-ads/</link>
+      <link>https://reidpig8350.github.io/posts/gtm-update-for-ads/</link>
       <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/gtm-update-for-ads/</guid>
+      <guid>https://reidpig8350.github.io/posts/gtm-update-for-ads/</guid>
       <description>這次（GTM）的更新將從 2025 年 4 月 10 日起，包含 Google Ads 和 Floodlight 代碼的 GTM 容器自動載入 Google 代碼，然後再傳送事件。這樣的改變有什麼影響？你需要採取行動嗎？</description>
     </item>
     <item>
       <title>為什麼 GA4 事件追蹤這麼重要？要怎麼應用在電商經營？</title>
-      <link>//localhost:1313/posts/ga-impact/</link>
+      <link>https://reidpig8350.github.io/posts/ga-impact/</link>
       <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/ga-impact/</guid>
+      <guid>https://reidpig8350.github.io/posts/ga-impact/</guid>
       <description>GA4 預設的流量報表已經很豐富，但它無法完全反映使用者在網站上的所有互動。如果想深入了解訪客行為，就需要透過事件追蹤來記錄「網站上的大小事」。</description>
     </item>
   </channel>

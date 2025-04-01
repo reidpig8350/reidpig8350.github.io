@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Metrics Whisper</title>
-    <link>//localhost:1313/categories/</link>
+    <link>https://reidpig8350.github.io/categories/</link>
     <description>Recent content in Categories on Metrics Whisper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en</language>
     <lastBuildDate>Sun, 30 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://reidpig8350.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GA4</title>
-      <link>//localhost:1313/categories/ga4/</link>
+      <link>https://reidpig8350.github.io/categories/ga4/</link>
       <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/ga4/</guid>
+      <guid>https://reidpig8350.github.io/categories/ga4/</guid>
       <description></description>
     </item>
     <item>
       <title>事件追蹤</title>
-      <link>//localhost:1313/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</link>
+      <link>https://reidpig8350.github.io/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</link>
       <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</guid>
+      <guid>https://reidpig8350.github.io/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</guid>
       <description></description>
     </item>
     <item>
       <title>GTM</title>
-      <link>//localhost:1313/categories/gtm/</link>
+      <link>https://reidpig8350.github.io/categories/gtm/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/gtm/</guid>
+      <guid>https://reidpig8350.github.io/categories/gtm/</guid>
       <description></description>
     </item>
     <item>
       <title>電商成長</title>
-      <link>//localhost:1313/categories/%E9%9B%BB%E5%95%86%E6%88%90%E9%95%B7/</link>
+      <link>https://reidpig8350.github.io/categories/%E9%9B%BB%E5%95%86%E6%88%90%E9%95%B7/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/%E9%9B%BB%E5%95%86%E6%88%90%E9%95%B7/</guid>
+      <guid>https://reidpig8350.github.io/categories/%E9%9B%BB%E5%95%86%E6%88%90%E9%95%B7/</guid>
       <description></description>
     </item>
   </channel>

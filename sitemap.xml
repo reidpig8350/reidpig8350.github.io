@@ -2,63 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>https://reidpig8350.github.io/categories/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/ga4/</loc>
+    <loc>https://reidpig8350.github.io/tags/ga4/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/ga4/</loc>
+    <loc>https://reidpig8350.github.io/categories/ga4/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/ga4-customize-dimension/</loc>
+    <loc>https://reidpig8350.github.io/posts/ga4-customize-dimension/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/gtm/</loc>
+    <loc>https://reidpig8350.github.io/tags/gtm/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/index/</loc>
+    <loc>https://reidpig8350.github.io/tags/index/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>https://reidpig8350.github.io/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>https://reidpig8350.github.io/posts/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>https://reidpig8350.github.io/tags/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</loc>
+    <loc>https://reidpig8350.github.io/categories/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/import-gtm-workspace/</loc>
+    <loc>https://reidpig8350.github.io/posts/import-gtm-workspace/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/starter-pack/</loc>
+    <loc>https://reidpig8350.github.io/posts/starter-pack/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/gtm-update-for-ads/</loc>
+    <loc>https://reidpig8350.github.io/posts/gtm-update-for-ads/</loc>
     <lastmod>2025-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/gtm/</loc>
+    <loc>https://reidpig8350.github.io/categories/gtm/</loc>
     <lastmod>2025-03-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</loc>
+    <loc>https://reidpig8350.github.io/tags/%E4%BA%8B%E4%BB%B6%E8%BF%BD%E8%B9%A4/</loc>
     <lastmod>2025-03-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/gtm-pageview/</loc>
+    <loc>https://reidpig8350.github.io/posts/gtm-pageview/</loc>
     <lastmod>2025-03-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/%E9%9B%BB%E5%95%86%E6%88%90%E9%95%B7/</loc>
+    <loc>https://reidpig8350.github.io/categories/%E9%9B%BB%E5%95%86%E6%88%90%E9%95%B7/</loc>
     <lastmod>2025-03-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/%E9%9B%BB%E5%95%86%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90/</loc>
+    <loc>https://reidpig8350.github.io/tags/%E9%9B%BB%E5%95%86%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90/</loc>
     <lastmod>2025-03-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/ga-impact/</loc>
+    <loc>https://reidpig8350.github.io/posts/ga-impact/</loc>
     <lastmod>2023-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/archives/</loc>
+    <loc>https://reidpig8350.github.io/archives/</loc>
   </url>
 </urlset>
